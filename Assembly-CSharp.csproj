@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{387ab8e6-a3f0-58e6-3b80-22847e4a7d2f}</ProjectGuid>
+    <ProjectGuid>{c9a46479-c385-e984-34fa-6d535f4a0bc3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -37,6 +37,23 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera.cs" />
+     <Compile Include="Assets\Scripts\Inimigo.cs" />
+     <Compile Include="Assets\Scripts\Jogador.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\Resizer.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -219,6 +236,18 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="GLTFSerialization">
+        <HintPath>C:/Jogo-Faculdade/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Unity">
+        <HintPath>C:/Jogo-Faculdade/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:/Jogo-Faculdade/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SketchfabPlugin">
+        <HintPath>C:/Jogo-Faculdade/Assets/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -566,31 +595,31 @@
         <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/ArquivosGiovani/GameFaculdade/GameFculdade/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Jogo-Faculdade/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
