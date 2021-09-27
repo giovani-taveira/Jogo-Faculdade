@@ -1,14 +1,2 @@
 Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=804 outsize=162 ok=1
-Cmd: preprocess
-  insize=5125 outsize=3057 ok=1
-Cmd: preprocess
-  insize=1272 outsize=263 ok=1
-Cmd: preprocess
-  insize=776 outsize=168 ok=1
-Cmd: preprocess
-  insize=1044 outsize=821 ok=1
-Cmd: preprocess
-  insize=1210 outsize=202 ok=1

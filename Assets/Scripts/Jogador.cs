@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Jogador : MonoBehaviour
 {
-    
     public float Velocidade = 10;
     Vector3 direcao;
     
@@ -13,9 +12,13 @@ public class Jogador : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {     
+
+    }
+
+    void FixedUpdate()
+    {
         MovimentaJogador();
     }
 
@@ -38,13 +41,17 @@ public class Jogador : MonoBehaviour
             GetComponent<Animator>().SetBool("Movendo", false);
         }
 
+        //Rotacionando o Jogador
         Quaternion rotacaoInimigo = Quaternion.LookRotation(direcao);
         GetComponent<Rigidbody>().MoveRotation(rotacaoInimigo);
-    }
 
-    void FixedUpdate()
-    {
+        //Movendo o Personagem
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position +
             (direcao * Velocidade * Time.deltaTime));
+
+        // Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
+        // Debug.Log(raio.direction);
+
     }
 }

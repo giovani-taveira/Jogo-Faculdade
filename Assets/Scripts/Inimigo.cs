@@ -9,7 +9,8 @@ public class Inimigo : MonoBehaviour
 
     void Start()
     {
-        
+        //Faz com que quando um inimigo é gerado ele vá procurar o jogo através da tag 
+        Jogador = GameObject.FindWithTag("Jogador");
     }
 
     void Update()
@@ -24,7 +25,7 @@ public class Inimigo : MonoBehaviour
 
         float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
-        if(distancia > 4)
+        if(distancia > 4.5)
         {
             //Faz com que o inimigo persiga o jogador subtraindo a posição do jogador pela do inimigo;
             Vector3 direcao = Jogador.transform.position - transform.position;
@@ -32,7 +33,7 @@ public class Inimigo : MonoBehaviour
             direcao.normalized * velocidade * Time.deltaTime);
 
             //Quaternion é um tipo usado para manipular rotações
-            //
+            //LookRotation 
             Quaternion rotacaoInimigo = Quaternion.LookRotation(direcao);
             GetComponent<Rigidbody>().MoveRotation(rotacaoInimigo);
         }
