@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class camera : MonoBehaviour
 {
     public GameObject jogador;
     private Vector3 cameraMovimento;

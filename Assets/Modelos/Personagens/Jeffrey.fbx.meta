@@ -11,10 +11,10 @@ ModelImporter:
     second: Parado
   - first:
       74: -1610863427237328480
-    second: Walking
+    second: Correr
   - first:
       74: 5745999529906736553
-    second: Runing
+    second: Correndo
   - first:
       74: 737046274283704126
     second: MeleeAtack
@@ -225,6 +225,9 @@ ModelImporter:
   - first:
       74: -1055766231766805323
     second: Andar
+  - first:
+      74: -1610863427237328480
+    second: Walking
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -341,10 +344,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Runing
+      name: Correndo
       takeName: Runing
       internalID: 0
-      firstFrame: 0
+      firstFrame: 0.91
       lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
@@ -352,7 +355,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

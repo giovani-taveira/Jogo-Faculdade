@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimentaBala : MonoBehaviour
 {
-    public float Velocidade = 20;
+    public float Velocidade = 90;
 
     void FixedUpdate()
     {
