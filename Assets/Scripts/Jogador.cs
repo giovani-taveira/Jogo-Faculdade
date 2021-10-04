@@ -32,7 +32,7 @@ public class Jogador : MonoBehaviour
     {
         float eixoX = Input.GetAxis("Vertical");
         float eixoZ = Input.GetAxis("Horizontal");  
-        direcao = new Vector3(eixoX, 0, eixoZ);      
+        direcao = new Vector3(eixoX, 0, eixoZ);   
 
         //Movendo o Personagem
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position +
@@ -71,12 +71,12 @@ public class Jogador : MonoBehaviour
             //GetComponent<Animator>().SetBool("MirandoArmaCurta", true);
         }
 
-        //if()
+        
     }
 
     void RotacionaJogador()
     {
-
+        
         //Rotacionando o Jogador com as teclas w, a, s, d
         Quaternion rotacaoInimigo = Quaternion.LookRotation(direcao);
         GetComponent<Rigidbody>().MoveRotation(rotacaoInimigo);

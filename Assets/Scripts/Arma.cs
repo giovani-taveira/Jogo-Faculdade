@@ -6,7 +6,7 @@ public class Arma : MonoBehaviour
 {
     public GameObject Bala;
     public GameObject ReferenciaBalaM18;
-    // Start is called before the first frame update
+   
     void Start()
     {
         

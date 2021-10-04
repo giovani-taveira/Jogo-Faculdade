@@ -1,0 +1,1016 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Anda-Mira
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Base
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase/mixamorig:LeftToe_End
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase/mixamorig:LeftToe_End/mixamorig:LeftToe_End_end
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase/mixamorig:RightToe_End
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase/mixamorig:RightToe_End/mixamorig:RightToe_End_end
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2/mixamorig:LeftHandIndex3
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2/mixamorig:LeftHandIndex3/mixamorig:LeftHandIndex4
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2/mixamorig:LeftHandIndex3/mixamorig:LeftHandIndex4/mixamorig:LeftHandIndex4_end
+    m_Weight: 0
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/mixamorig:HeadTop_End
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/mixamorig:HeadTop_End/mixamorig:HeadTop_End_end
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2/mixamorig:RightHandIndex3
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2/mixamorig:RightHandIndex3/mixamorig:RightHandIndex4
+    m_Weight: 1
+  - m_Path: Base/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2/mixamorig:RightHandIndex3/mixamorig:RightHandIndex4/mixamorig:RightHandIndex4_end
+    m_Weight: 1
+  - m_Path: BASE_Low Poly Man
+    m_Weight: 1
+  - m_Path: Camera
+    m_Weight: 1
+  - m_Path: ChestRig01
+    m_Weight: 1
+  - m_Path: headCap
+    m_Weight: 1
+  - m_Path: Idle
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1/mixamorig:LeftLeg 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1/mixamorig:LeftLeg 1/mixamorig:LeftFoot
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1/mixamorig:LeftLeg 1/mixamorig:LeftFoot
+      1/mixamorig:LeftToeBase 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1/mixamorig:LeftLeg 1/mixamorig:LeftFoot
+      1/mixamorig:LeftToeBase 1/mixamorig:LeftToe_End 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:LeftUpLeg 1/mixamorig:LeftLeg 1/mixamorig:LeftFoot
+      1/mixamorig:LeftToeBase 1/mixamorig:LeftToe_End 1/mixamorig:LeftToe_End_end
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1/mixamorig:RightLeg 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1/mixamorig:RightLeg 1/mixamorig:RightFoot
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1/mixamorig:RightLeg 1/mixamorig:RightFoot
+      1/mixamorig:RightToeBase 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1/mixamorig:RightLeg 1/mixamorig:RightFoot
+      1/mixamorig:RightToeBase 1/mixamorig:RightToe_End 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:RightUpLeg 1/mixamorig:RightLeg 1/mixamorig:RightFoot
+      1/mixamorig:RightToeBase 1/mixamorig:RightToe_End 1/mixamorig:RightToe_End_end
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1/mixamorig:LeftHandIndex1 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1/mixamorig:LeftHandIndex1 1/mixamorig:LeftHandIndex2 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1/mixamorig:LeftHandIndex1 1/mixamorig:LeftHandIndex2 1/mixamorig:LeftHandIndex3
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1/mixamorig:LeftHandIndex1 1/mixamorig:LeftHandIndex2 1/mixamorig:LeftHandIndex3
+      1/mixamorig:LeftHandIndex4 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:LeftShoulder 1/mixamorig:LeftArm 1/mixamorig:LeftForeArm 1/mixamorig:LeftHand
+      1/mixamorig:LeftHandIndex1 1/mixamorig:LeftHandIndex2 1/mixamorig:LeftHandIndex3
+      1/mixamorig:LeftHandIndex4 1/mixamorig:LeftHandIndex4_end 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:Neck 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:Neck 1/mixamorig:Head 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:Neck 1/mixamorig:Head 1/mixamorig:HeadTop_End 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:Neck 1/mixamorig:Head 1/mixamorig:HeadTop_End 1/mixamorig:HeadTop_End_end
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1/mixamorig:RightHandIndex1 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1/mixamorig:RightHandIndex1 1/mixamorig:RightHandIndex2 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1/mixamorig:RightHandIndex1 1/mixamorig:RightHandIndex2 1/mixamorig:RightHandIndex3
+      1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1/mixamorig:RightHandIndex1 1/mixamorig:RightHandIndex2 1/mixamorig:RightHandIndex3
+      1/mixamorig:RightHandIndex4 1
+    m_Weight: 1
+  - m_Path: Idle/mixamorig:Hips 1/mixamorig:Spine 1/mixamorig:Spine1 1/mixamorig:Spine2
+      1/mixamorig:RightShoulder 1/mixamorig:RightArm 1/mixamorig:RightForeArm 1/mixamorig:RightHand
+      1/mixamorig:RightHandIndex1 1/mixamorig:RightHandIndex2 1/mixamorig:RightHandIndex3
+      1/mixamorig:RightHandIndex4 1/mixamorig:RightHandIndex4_end 1
+    m_Weight: 1
+  - m_Path: MelleAtack
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2/mixamorig:LeftLeg 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2/mixamorig:LeftLeg 2/mixamorig:LeftFoot
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2/mixamorig:LeftLeg 2/mixamorig:LeftFoot
+      2/mixamorig:LeftToeBase 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2/mixamorig:LeftLeg 2/mixamorig:LeftFoot
+      2/mixamorig:LeftToeBase 2/mixamorig:LeftToe_End 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:LeftUpLeg 2/mixamorig:LeftLeg 2/mixamorig:LeftFoot
+      2/mixamorig:LeftToeBase 2/mixamorig:LeftToe_End 2/mixamorig:LeftToe_End_end
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2/mixamorig:RightLeg
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2/mixamorig:RightLeg
+      2/mixamorig:RightFoot 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2/mixamorig:RightLeg
+      2/mixamorig:RightFoot 2/mixamorig:RightToeBase 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2/mixamorig:RightLeg
+      2/mixamorig:RightFoot 2/mixamorig:RightToeBase 2/mixamorig:RightToe_End 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:RightUpLeg 2/mixamorig:RightLeg
+      2/mixamorig:RightFoot 2/mixamorig:RightToeBase 2/mixamorig:RightToe_End 2/mixamorig:RightToe_End_end
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2/mixamorig:LeftHandIndex1 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2/mixamorig:LeftHandIndex1 2/mixamorig:LeftHandIndex2 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2/mixamorig:LeftHandIndex1 2/mixamorig:LeftHandIndex2 2/mixamorig:LeftHandIndex3
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2/mixamorig:LeftHandIndex1 2/mixamorig:LeftHandIndex2 2/mixamorig:LeftHandIndex3
+      2/mixamorig:LeftHandIndex4 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:LeftShoulder 2/mixamorig:LeftArm 2/mixamorig:LeftForeArm 2/mixamorig:LeftHand
+      2/mixamorig:LeftHandIndex1 2/mixamorig:LeftHandIndex2 2/mixamorig:LeftHandIndex3
+      2/mixamorig:LeftHandIndex4 2/mixamorig:LeftHandIndex4_end 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:Neck 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:Neck 2/mixamorig:Head 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:Neck 2/mixamorig:Head 2/mixamorig:HeadTop_End 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:Neck 2/mixamorig:Head 2/mixamorig:HeadTop_End 2/mixamorig:HeadTop_End_end
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2/mixamorig:RightHandIndex1 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2/mixamorig:RightHandIndex1 2/mixamorig:RightHandIndex2 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2/mixamorig:RightHandIndex1 2/mixamorig:RightHandIndex2 2/mixamorig:RightHandIndex3
+      2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2/mixamorig:RightHandIndex1 2/mixamorig:RightHandIndex2 2/mixamorig:RightHandIndex3
+      2/mixamorig:RightHandIndex4 2
+    m_Weight: 1
+  - m_Path: MelleAtack/mixamorig:Hips 2/mixamorig:Spine 2/mixamorig:Spine1 2/mixamorig:Spine2
+      2/mixamorig:RightShoulder 2/mixamorig:RightArm 2/mixamorig:RightForeArm 2/mixamorig:RightHand
+      2/mixamorig:RightHandIndex1 2/mixamorig:RightHandIndex2 2/mixamorig:RightHandIndex3
+      2/mixamorig:RightHandIndex4 2/mixamorig:RightHandIndex4_end 2
+    m_Weight: 1
+  - m_Path: Pants01
+    m_Weight: 1
+  - m_Path: PickUp
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3/mixamorig:LeftLeg 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3/mixamorig:LeftLeg 3/mixamorig:LeftFoot
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3/mixamorig:LeftLeg 3/mixamorig:LeftFoot
+      3/mixamorig:LeftToeBase 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3/mixamorig:LeftLeg 3/mixamorig:LeftFoot
+      3/mixamorig:LeftToeBase 3/mixamorig:LeftToe_End 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:LeftUpLeg 3/mixamorig:LeftLeg 3/mixamorig:LeftFoot
+      3/mixamorig:LeftToeBase 3/mixamorig:LeftToe_End 3/mixamorig:LeftToe_End_end
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3/mixamorig:RightLeg 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3/mixamorig:RightLeg 3/mixamorig:RightFoot
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3/mixamorig:RightLeg 3/mixamorig:RightFoot
+      3/mixamorig:RightToeBase 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3/mixamorig:RightLeg 3/mixamorig:RightFoot
+      3/mixamorig:RightToeBase 3/mixamorig:RightToe_End 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:RightUpLeg 3/mixamorig:RightLeg 3/mixamorig:RightFoot
+      3/mixamorig:RightToeBase 3/mixamorig:RightToe_End 3/mixamorig:RightToe_End_end
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3/mixamorig:LeftHandIndex1 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3/mixamorig:LeftHandIndex1 3/mixamorig:LeftHandIndex2 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3/mixamorig:LeftHandIndex1 3/mixamorig:LeftHandIndex2 3/mixamorig:LeftHandIndex3
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3/mixamorig:LeftHandIndex1 3/mixamorig:LeftHandIndex2 3/mixamorig:LeftHandIndex3
+      3/mixamorig:LeftHandIndex4 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:LeftShoulder 3/mixamorig:LeftArm 3/mixamorig:LeftForeArm 3/mixamorig:LeftHand
+      3/mixamorig:LeftHandIndex1 3/mixamorig:LeftHandIndex2 3/mixamorig:LeftHandIndex3
+      3/mixamorig:LeftHandIndex4 3/mixamorig:LeftHandIndex4_end 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:Neck 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:Neck 3/mixamorig:Head 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:Neck 3/mixamorig:Head 3/mixamorig:HeadTop_End 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:Neck 3/mixamorig:Head 3/mixamorig:HeadTop_End 3/mixamorig:HeadTop_End_end
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3/mixamorig:RightHandIndex1 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3/mixamorig:RightHandIndex1 3/mixamorig:RightHandIndex2 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3/mixamorig:RightHandIndex1 3/mixamorig:RightHandIndex2 3/mixamorig:RightHandIndex3
+      3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3/mixamorig:RightHandIndex1 3/mixamorig:RightHandIndex2 3/mixamorig:RightHandIndex3
+      3/mixamorig:RightHandIndex4 3
+    m_Weight: 1
+  - m_Path: PickUp/mixamorig:Hips 3/mixamorig:Spine 3/mixamorig:Spine1 3/mixamorig:Spine2
+      3/mixamorig:RightShoulder 3/mixamorig:RightArm 3/mixamorig:RightForeArm 3/mixamorig:RightHand
+      3/mixamorig:RightHandIndex1 3/mixamorig:RightHandIndex2 3/mixamorig:RightHandIndex3
+      3/mixamorig:RightHandIndex4 3/mixamorig:RightHandIndex4_end 3
+    m_Weight: 1
+  - m_Path: Pistol
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4/mixamorig:LeftLeg 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4/mixamorig:LeftLeg 4/mixamorig:LeftFoot
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4/mixamorig:LeftLeg 4/mixamorig:LeftFoot
+      4/mixamorig:LeftToeBase 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4/mixamorig:LeftLeg 4/mixamorig:LeftFoot
+      4/mixamorig:LeftToeBase 4/mixamorig:LeftToe_End 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:LeftUpLeg 4/mixamorig:LeftLeg 4/mixamorig:LeftFoot
+      4/mixamorig:LeftToeBase 4/mixamorig:LeftToe_End 4/mixamorig:LeftToe_End_end
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4/mixamorig:RightLeg 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4/mixamorig:RightLeg 4/mixamorig:RightFoot
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4/mixamorig:RightLeg 4/mixamorig:RightFoot
+      4/mixamorig:RightToeBase 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4/mixamorig:RightLeg 4/mixamorig:RightFoot
+      4/mixamorig:RightToeBase 4/mixamorig:RightToe_End 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:RightUpLeg 4/mixamorig:RightLeg 4/mixamorig:RightFoot
+      4/mixamorig:RightToeBase 4/mixamorig:RightToe_End 4/mixamorig:RightToe_End_end
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4/mixamorig:LeftHandIndex1 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4/mixamorig:LeftHandIndex1 4/mixamorig:LeftHandIndex2 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4/mixamorig:LeftHandIndex1 4/mixamorig:LeftHandIndex2 4/mixamorig:LeftHandIndex3
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4/mixamorig:LeftHandIndex1 4/mixamorig:LeftHandIndex2 4/mixamorig:LeftHandIndex3
+      4/mixamorig:LeftHandIndex4 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:LeftShoulder 4/mixamorig:LeftArm 4/mixamorig:LeftForeArm 4/mixamorig:LeftHand
+      4/mixamorig:LeftHandIndex1 4/mixamorig:LeftHandIndex2 4/mixamorig:LeftHandIndex3
+      4/mixamorig:LeftHandIndex4 4/mixamorig:LeftHandIndex4_end 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:Neck 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:Neck 4/mixamorig:Head 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:Neck 4/mixamorig:Head 4/mixamorig:HeadTop_End 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:Neck 4/mixamorig:Head 4/mixamorig:HeadTop_End 4/mixamorig:HeadTop_End_end
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4/mixamorig:RightHandIndex1 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4/mixamorig:RightHandIndex1 4/mixamorig:RightHandIndex2 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4/mixamorig:RightHandIndex1 4/mixamorig:RightHandIndex2 4/mixamorig:RightHandIndex3
+      4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4/mixamorig:RightHandIndex1 4/mixamorig:RightHandIndex2 4/mixamorig:RightHandIndex3
+      4/mixamorig:RightHandIndex4 4
+    m_Weight: 1
+  - m_Path: Pistol/mixamorig:Hips 4/mixamorig:Spine 4/mixamorig:Spine1 4/mixamorig:Spine2
+      4/mixamorig:RightShoulder 4/mixamorig:RightArm 4/mixamorig:RightForeArm 4/mixamorig:RightHand
+      4/mixamorig:RightHandIndex1 4/mixamorig:RightHandIndex2 4/mixamorig:RightHandIndex3
+      4/mixamorig:RightHandIndex4 4/mixamorig:RightHandIndex4_end 4
+    m_Weight: 1
+  - m_Path: Rifle
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5/mixamorig:LeftLeg 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5/mixamorig:LeftLeg 5/mixamorig:LeftFoot
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5/mixamorig:LeftLeg 5/mixamorig:LeftFoot
+      5/mixamorig:LeftToeBase 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5/mixamorig:LeftLeg 5/mixamorig:LeftFoot
+      5/mixamorig:LeftToeBase 5/mixamorig:LeftToe_End 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:LeftUpLeg 5/mixamorig:LeftLeg 5/mixamorig:LeftFoot
+      5/mixamorig:LeftToeBase 5/mixamorig:LeftToe_End 5/mixamorig:LeftToe_End_end
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5/mixamorig:RightLeg 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5/mixamorig:RightLeg 5/mixamorig:RightFoot
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5/mixamorig:RightLeg 5/mixamorig:RightFoot
+      5/mixamorig:RightToeBase 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5/mixamorig:RightLeg 5/mixamorig:RightFoot
+      5/mixamorig:RightToeBase 5/mixamorig:RightToe_End 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:RightUpLeg 5/mixamorig:RightLeg 5/mixamorig:RightFoot
+      5/mixamorig:RightToeBase 5/mixamorig:RightToe_End 5/mixamorig:RightToe_End_end
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5/mixamorig:LeftHandIndex1 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5/mixamorig:LeftHandIndex1 5/mixamorig:LeftHandIndex2 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5/mixamorig:LeftHandIndex1 5/mixamorig:LeftHandIndex2 5/mixamorig:LeftHandIndex3
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5/mixamorig:LeftHandIndex1 5/mixamorig:LeftHandIndex2 5/mixamorig:LeftHandIndex3
+      5/mixamorig:LeftHandIndex4 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:LeftShoulder 5/mixamorig:LeftArm 5/mixamorig:LeftForeArm 5/mixamorig:LeftHand
+      5/mixamorig:LeftHandIndex1 5/mixamorig:LeftHandIndex2 5/mixamorig:LeftHandIndex3
+      5/mixamorig:LeftHandIndex4 5/mixamorig:LeftHandIndex4_end 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:Neck 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:Neck 5/mixamorig:Head 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:Neck 5/mixamorig:Head 5/mixamorig:HeadTop_End 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:Neck 5/mixamorig:Head 5/mixamorig:HeadTop_End 5/mixamorig:HeadTop_End_end
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5/mixamorig:RightHandIndex1 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5/mixamorig:RightHandIndex1 5/mixamorig:RightHandIndex2 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5/mixamorig:RightHandIndex1 5/mixamorig:RightHandIndex2 5/mixamorig:RightHandIndex3
+      5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5/mixamorig:RightHandIndex1 5/mixamorig:RightHandIndex2 5/mixamorig:RightHandIndex3
+      5/mixamorig:RightHandIndex4 5
+    m_Weight: 1
+  - m_Path: Rifle/mixamorig:Hips 5/mixamorig:Spine 5/mixamorig:Spine1 5/mixamorig:Spine2
+      5/mixamorig:RightShoulder 5/mixamorig:RightArm 5/mixamorig:RightForeArm 5/mixamorig:RightHand
+      5/mixamorig:RightHandIndex1 5/mixamorig:RightHandIndex2 5/mixamorig:RightHandIndex3
+      5/mixamorig:RightHandIndex4 5/mixamorig:RightHandIndex4_end 5
+    m_Weight: 1
+  - m_Path: Runing
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6/mixamorig:LeftLeg 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6/mixamorig:LeftLeg 6/mixamorig:LeftFoot
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6/mixamorig:LeftLeg 6/mixamorig:LeftFoot
+      6/mixamorig:LeftToeBase 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6/mixamorig:LeftLeg 6/mixamorig:LeftFoot
+      6/mixamorig:LeftToeBase 6/mixamorig:LeftToe_End 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:LeftUpLeg 6/mixamorig:LeftLeg 6/mixamorig:LeftFoot
+      6/mixamorig:LeftToeBase 6/mixamorig:LeftToe_End 6/mixamorig:LeftToe_End_end
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6/mixamorig:RightLeg 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6/mixamorig:RightLeg 6/mixamorig:RightFoot
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6/mixamorig:RightLeg 6/mixamorig:RightFoot
+      6/mixamorig:RightToeBase 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6/mixamorig:RightLeg 6/mixamorig:RightFoot
+      6/mixamorig:RightToeBase 6/mixamorig:RightToe_End 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:RightUpLeg 6/mixamorig:RightLeg 6/mixamorig:RightFoot
+      6/mixamorig:RightToeBase 6/mixamorig:RightToe_End 6/mixamorig:RightToe_End_end
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6/mixamorig:LeftHandIndex1 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6/mixamorig:LeftHandIndex1 6/mixamorig:LeftHandIndex2 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6/mixamorig:LeftHandIndex1 6/mixamorig:LeftHandIndex2 6/mixamorig:LeftHandIndex3
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6/mixamorig:LeftHandIndex1 6/mixamorig:LeftHandIndex2 6/mixamorig:LeftHandIndex3
+      6/mixamorig:LeftHandIndex4 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:LeftShoulder 6/mixamorig:LeftArm 6/mixamorig:LeftForeArm 6/mixamorig:LeftHand
+      6/mixamorig:LeftHandIndex1 6/mixamorig:LeftHandIndex2 6/mixamorig:LeftHandIndex3
+      6/mixamorig:LeftHandIndex4 6/mixamorig:LeftHandIndex4_end 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:Neck 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:Neck 6/mixamorig:Head 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:Neck 6/mixamorig:Head 6/mixamorig:HeadTop_End 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:Neck 6/mixamorig:Head 6/mixamorig:HeadTop_End 6/mixamorig:HeadTop_End_end
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6/mixamorig:RightHandIndex1 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6/mixamorig:RightHandIndex1 6/mixamorig:RightHandIndex2 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6/mixamorig:RightHandIndex1 6/mixamorig:RightHandIndex2 6/mixamorig:RightHandIndex3
+      6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6/mixamorig:RightHandIndex1 6/mixamorig:RightHandIndex2 6/mixamorig:RightHandIndex3
+      6/mixamorig:RightHandIndex4 6
+    m_Weight: 1
+  - m_Path: Runing/mixamorig:Hips 6/mixamorig:Spine 6/mixamorig:Spine1 6/mixamorig:Spine2
+      6/mixamorig:RightShoulder 6/mixamorig:RightArm 6/mixamorig:RightForeArm 6/mixamorig:RightHand
+      6/mixamorig:RightHandIndex1 6/mixamorig:RightHandIndex2 6/mixamorig:RightHandIndex3
+      6/mixamorig:RightHandIndex4 6/mixamorig:RightHandIndex4_end 6
+    m_Weight: 1
+  - m_Path: Shirt01
+    m_Weight: 1
+  - m_Path: Shoes01
+    m_Weight: 1
+  - m_Path: Walking
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7/mixamorig:LeftLeg 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7/mixamorig:LeftLeg 7/mixamorig:LeftFoot
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7/mixamorig:LeftLeg 7/mixamorig:LeftFoot
+      7/mixamorig:LeftToeBase 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7/mixamorig:LeftLeg 7/mixamorig:LeftFoot
+      7/mixamorig:LeftToeBase 7/mixamorig:LeftToe_End 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:LeftUpLeg 7/mixamorig:LeftLeg 7/mixamorig:LeftFoot
+      7/mixamorig:LeftToeBase 7/mixamorig:LeftToe_End 7/mixamorig:LeftToe_End_end
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7/mixamorig:RightLeg 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7/mixamorig:RightLeg 7/mixamorig:RightFoot
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7/mixamorig:RightLeg 7/mixamorig:RightFoot
+      7/mixamorig:RightToeBase 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7/mixamorig:RightLeg 7/mixamorig:RightFoot
+      7/mixamorig:RightToeBase 7/mixamorig:RightToe_End 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:RightUpLeg 7/mixamorig:RightLeg 7/mixamorig:RightFoot
+      7/mixamorig:RightToeBase 7/mixamorig:RightToe_End 7/mixamorig:RightToe_End_end
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7/mixamorig:LeftHandIndex1 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7/mixamorig:LeftHandIndex1 7/mixamorig:LeftHandIndex2 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7/mixamorig:LeftHandIndex1 7/mixamorig:LeftHandIndex2 7/mixamorig:LeftHandIndex3
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7/mixamorig:LeftHandIndex1 7/mixamorig:LeftHandIndex2 7/mixamorig:LeftHandIndex3
+      7/mixamorig:LeftHandIndex4 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:LeftShoulder 7/mixamorig:LeftArm 7/mixamorig:LeftForeArm 7/mixamorig:LeftHand
+      7/mixamorig:LeftHandIndex1 7/mixamorig:LeftHandIndex2 7/mixamorig:LeftHandIndex3
+      7/mixamorig:LeftHandIndex4 7/mixamorig:LeftHandIndex4_end 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:Neck 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:Neck 7/mixamorig:Head 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:Neck 7/mixamorig:Head 7/mixamorig:HeadTop_End 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:Neck 7/mixamorig:Head 7/mixamorig:HeadTop_End 7/mixamorig:HeadTop_End_end
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7/mixamorig:RightHandIndex1 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7/mixamorig:RightHandIndex1 7/mixamorig:RightHandIndex2 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7/mixamorig:RightHandIndex1 7/mixamorig:RightHandIndex2 7/mixamorig:RightHandIndex3
+      7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7/mixamorig:RightHandIndex1 7/mixamorig:RightHandIndex2 7/mixamorig:RightHandIndex3
+      7/mixamorig:RightHandIndex4 7
+    m_Weight: 1
+  - m_Path: Walking/mixamorig:Hips 7/mixamorig:Spine 7/mixamorig:Spine1 7/mixamorig:Spine2
+      7/mixamorig:RightShoulder 7/mixamorig:RightArm 7/mixamorig:RightForeArm 7/mixamorig:RightHand
+      7/mixamorig:RightHandIndex1 7/mixamorig:RightHandIndex2 7/mixamorig:RightHandIndex3
+      7/mixamorig:RightHandIndex4 7/mixamorig:RightHandIndex4_end 7
+    m_Weight: 1

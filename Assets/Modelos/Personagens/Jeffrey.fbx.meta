@@ -260,7 +260,7 @@ ModelImporter:
       name: Andar
       takeName: Walking
       internalID: 0
-      firstFrame: 0.85
+      firstFrame: 0.75
       lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
@@ -419,7 +419,7 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0

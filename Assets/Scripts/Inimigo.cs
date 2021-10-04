@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,7 @@ public class Inimigo : MonoBehaviour
 
         float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
-        if(distancia > 4.5)
+        if(distancia > 0.1)
         {
             //Faz com que o inimigo persiga o jogador subtraindo a posição do jogador pela do inimigo;
             Vector3 direcao = Jogador.transform.position - transform.position;

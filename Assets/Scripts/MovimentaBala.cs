@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimentaBala : MonoBehaviour
 {
-    public float Velocidade = 90;
+    public float Velocidade = 1;
 
     void FixedUpdate()
     {
@@ -14,7 +14,7 @@ public class MovimentaBala : MonoBehaviour
 
     void OnTriggerEnter(Collider colisor)
     {
-        //DEstruindo o Inimigo
+        //Destruindo o Inimigo
         if(colisor.tag == "Inimigo")
         {
             Destroy(colisor.gameObject);
