@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
 {
@@ -9,25 +10,52 @@ public class Jogador : MonoBehaviour
     /*Para evitar que o raio colida em outros objetos além do chão então é criado essa mascara 
     abaixo que so considera o chão*/
     public LayerMask MascaraChao;
-    
-    
-    void Start()
+    public int Vida = 100;
+    bool EstaPausado = false;
+    public GameObject InterfaceMenu;
+    public Image barraVida;
+ 
+
+    void OnCollisionEnter(Collision colisor)
     {
-        
+        //Destruindo o Inimigo
+        if(colisor.gameObject.tag == "Inimigo")
+        {
+            Vida -= 10;
+            barraVida.fillAmount -= 0.1f;
+        }
+    }
+    void Start()
+    { 
+           Vida = 100;   
     }
 
     void Update()
-    {     
+    { 
 
+        if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == false)
+        {
+            Time.timeScale = 0;
+            InterfaceMenu.SetActive(true);
+            EstaPausado = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == true)
+        {
+            Time.timeScale = 1;
+            InterfaceMenu.SetActive(false);
+            EstaPausado = false;
+        }
+        ControladorVida();
+        //BarraVida();
     }
 
     void FixedUpdate()
     {
+
         MovimentaJogador();
         RotacionaJogador();
     }
-
-    
+ 
     private void MovimentaJogador()
     {
         float eixoX = Input.GetAxis("Vertical");
@@ -69,14 +97,11 @@ public class Jogador : MonoBehaviour
             GetComponent<Animator>().SetBool("Parado", true);
             GetComponent<Animator>().SetBool("Correndo", false);
             //GetComponent<Animator>().SetBool("MirandoArmaCurta", true);
-        }
-
-        
+        }     
     }
 
     void RotacionaJogador()
-    {
-        
+    {    
         //Rotacionando o Jogador com as teclas w, a, s, d
         Quaternion rotacaoInimigo = Quaternion.LookRotation(direcao);
         GetComponent<Rigidbody>().MoveRotation(rotacaoInimigo);
@@ -87,7 +112,7 @@ public class Jogador : MonoBehaviour
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
         //DrawRay Desenha o Raio
         Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
-        Debug.Log(raio.direction);
+        //Debug.Log(raio.direction);
         //RayCastHit Pega o raio desenhado e verfica onde ele está colidindo(no caso o chão do jogo)
         RaycastHit impacto;
 
@@ -102,5 +127,21 @@ public class Jogador : MonoBehaviour
             Quaternion rotacaoMouse = Quaternion.LookRotation(posicaoMiraJogador);
             GetComponent<Rigidbody>().MoveRotation(rotacaoMouse);
         }
+    }
+
+    void ControladorVida()
+    {
+
+        if(Vida <= 0) 
+        {
+            Vida = 0;
+            Debug.Log("Morreu");
+        }
+    } 
+
+    void BarraVida()
+    {
+        //Formula para diminuir ou aumentar a barra de vida
+        barraVida.fillAmount = 1 / Vida;   
     }
 }

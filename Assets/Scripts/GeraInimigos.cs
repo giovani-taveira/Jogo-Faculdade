@@ -12,7 +12,6 @@ public class GeraInimigos : MonoBehaviour
         
     }
 
-
     void Update()
     {
         CriaInimigo();           

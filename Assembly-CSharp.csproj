@@ -37,11 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Arma.cs" />
-     <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\GeraInimigos.cs" />
      <Compile Include="Assets\Scripts\Inimigo.cs" />
      <Compile Include="Assets\Scripts\Jogador.cs" />
      <Compile Include="Assets\Scripts\MovimentaBala.cs" />
+     <Compile Include="Assets\Scripts\Outros.cs" />
+     <Compile Include="Assets\Scripts\camera.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
