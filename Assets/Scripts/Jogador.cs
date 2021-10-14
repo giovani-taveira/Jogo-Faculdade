@@ -13,8 +13,14 @@ public class Jogador : MonoBehaviour
     public int Vida = 100;
     bool EstaPausado = false;
     public GameObject InterfaceMenu;
+    public GameObject InterfaceMorte;
     public Image barraVida;
- 
+    public Image barraStamina;
+    //Range[1, 100]
+    public int Stamina = 100;
+    bool estaCorrendo = false;
+    bool estaParado = true;
+    bool estaAndando = false; 
 
     void OnCollisionEnter(Collision colisor)
     {
@@ -27,26 +33,14 @@ public class Jogador : MonoBehaviour
     }
     void Start()
     { 
-           Vida = 100;   
+        Vida = 100;  
+        Stamina = 100; 
     }
 
     void Update()
     { 
-
-        if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == false)
-        {
-            Time.timeScale = 0;
-            InterfaceMenu.SetActive(true);
-            EstaPausado = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == true)
-        {
-            Time.timeScale = 1;
-            InterfaceMenu.SetActive(false);
-            EstaPausado = false;
-        }
+        PausaJogo();
         ControladorVida();
-        //BarraVida();
     }
 
     void FixedUpdate()
@@ -75,20 +69,41 @@ public class Jogador : MonoBehaviour
             GetComponent<Animator>().SetBool("Andando", true);
             GetComponent<Animator>().SetBool("Correndo", false);
             GetComponent<Animator>().SetBool("Parado", false);
+
+            estaAndando = true;
+            estaParado = false;
+            estaCorrendo = false;
             //GetComponent<Animator>().SetBool("MirandoArmaCurta", true);
 
             if(Input.GetKey(KeyCode.LeftShift))
             {
-                GetComponent<Animator>().SetBool("Correndo", true);
-                Velocidade = 16;
-                GetComponent<Animator>().SetBool("Andando", false);
-                GetComponent<Animator>().SetBool("Parado", false);
-                //GetComponent<Animator>().SetBool("MirandoArmaCurta", false);
+                Velocidade = 9;
+                if(Stamina >= 0)
+                {
+                    GetComponent<Animator>().SetBool("Correndo", true);
+                    Velocidade = 16;
+                    estaCorrendo = true;
+                    estaParado = false;
+                    estaAndando = false;
+                    GetComponent<Animator>().SetBool("Andando", false);
+                    GetComponent<Animator>().SetBool("Parado", false);
+                    Stamina -= 1;
+                    barraStamina.fillAmount -= 0.01f;
+                }
+
             }
             else
             {
                 GetComponent<Animator>().SetBool("Correndo", false);
                 Velocidade = 9;
+
+                estaCorrendo = false;
+                estaAndando = true;
+                if(estaAndando == true)
+                {
+                    estaParado = false;
+                    Teste();
+                }           
             }
         }
         else
@@ -96,8 +111,24 @@ public class Jogador : MonoBehaviour
             GetComponent<Animator>().SetBool("Andando", false);
             GetComponent<Animator>().SetBool("Parado", true);
             GetComponent<Animator>().SetBool("Correndo", false);
+
+            estaParado = true;
+            if(estaParado == true)
+            {
+                estaAndando = false;
+                Teste();
+            }
             //GetComponent<Animator>().SetBool("MirandoArmaCurta", true);
-        }     
+        } 
+    }
+
+    void Teste()
+    {
+        if(Stamina < 100)
+        {
+            Stamina += 1;
+            barraStamina.fillAmount += 0.01f; 
+        }
     }
 
     void RotacionaJogador()
@@ -131,17 +162,27 @@ public class Jogador : MonoBehaviour
 
     void ControladorVida()
     {
-
         if(Vida <= 0) 
         {
             Vida = 0;
-            Debug.Log("Morreu");
+            Time.timeScale = 0;
+            InterfaceMorte.SetActive(true);      
         }
     } 
 
-    void BarraVida()
-    {
-        //Formula para diminuir ou aumentar a barra de vida
-        barraVida.fillAmount = 1 / Vida;   
+    void PausaJogo()
+    {   
+        if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == false)
+        {
+            Time.timeScale = 0;
+            InterfaceMenu.SetActive(true);
+            EstaPausado = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == true)
+        {
+            Time.timeScale = 1;
+            InterfaceMenu.SetActive(false);
+            EstaPausado = false;
+        }
     }
 }
