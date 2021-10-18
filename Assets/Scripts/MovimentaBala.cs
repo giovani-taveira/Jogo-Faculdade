@@ -1,26 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class MovimentaBala : MonoBehaviour
 {
     public float Velocidade = 1;
+    public static bool DestruiuInimigo = false;
+    public static bool AcertouInimigo = false;
+    public static bool acabouVida = false;
+
 
     void FixedUpdate()
     {
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position +
             transform.forward * Velocidade * Time.deltaTime);
+        //AdicionaXP(); 
     }
 
-    void OnTriggerEnter(Collider colisor)
+    public void OnTriggerEnter(Collider colisor)
     {
         //Destruindo o Inimigo
         if(colisor.tag == "Inimigo")
         {
-            Destroy(colisor.gameObject);
+            if(VidaInimigo.vidaAtualInimigo > 0 && VidaInimigo.vidaAtualInimigo <= 100)
+            {
+                AcertouInimigo = true;      
+            }
+            if(VidaInimigo.vidaAtualInimigo <= 0 )
+            {
+                Destroy(colisor.gameObject);;
+                DestruiuInimigo = true;
+            }
         }
         //Destruindo a Bala;
-        //O gameObject é o objeto que recebera este script
         Destroy(gameObject);
     }
 }
