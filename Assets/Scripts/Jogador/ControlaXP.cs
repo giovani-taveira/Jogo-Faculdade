@@ -27,15 +27,9 @@ public class ControlaXP : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y))
-            AddXP(10);
-        if(Input.GetKeyDown(KeyCode.U))
-            AddXP(100);
-        if(Input.GetKeyDown(KeyCode.I))
-            AddXP(1000);
         if(MovimentaBala.DestruiuInimigo == true)
         {
-            AddXP(10);
+            AddXP(20);
             MovimentaBala.DestruiuInimigo = false;
         }
     }

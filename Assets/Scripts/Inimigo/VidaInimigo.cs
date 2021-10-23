@@ -28,7 +28,7 @@ public class VidaInimigo : MonoBehaviour
         if(MovimentaBala.AcertouInimigo == true && vidaInimigo > 0)
         {
             vidaAtualInimigo -= 35;
-            barraVidaInimigo.fillAmount -= 0.35f;
+            barraVidaInimigo.fillAmount -= 0.25f;
             MovimentaBala.AcertouInimigo = false;
         }
     }

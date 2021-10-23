@@ -33,7 +33,7 @@ public class Jogador : MonoBehaviour
         //Movendo o Personagem
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position +
             (direcao * Velocidade * Time.deltaTime));
-
+    
         /*Testando se o jogador está apertando alguma 
         tecla de movimentação para mudar a animação*/
         if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
