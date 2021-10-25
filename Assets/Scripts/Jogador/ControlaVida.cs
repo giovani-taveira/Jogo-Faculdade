@@ -2,12 +2,15 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class ControlaVida : MonoBehaviour
 {
     public int VidaInicial = 100;
     public static int Vida = 100;
     public Image barraVida;
     public GameObject InterfaceMorte;
+    public Text Txt_Vida;
+
     
     void Start()
     {
@@ -27,6 +30,8 @@ public class ControlaVida : MonoBehaviour
                 Vida = VidaInicial;
             }
         }
+        Txt_Vida.text = $"{Vida} / {VidaInicial}";
+
     }
 
     void OnCollisionEnter(Collision colisor)

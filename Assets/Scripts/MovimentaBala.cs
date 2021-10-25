@@ -27,7 +27,7 @@ public class MovimentaBala : MonoBehaviour
             }
             if(VidaInimigo.vidaAtualInimigo <= 0 )
             {
-                Destroy(colisor.gameObject);;
+                Destroy(colisor.gameObject);
                 DestruiuInimigo = true;
             }
         }

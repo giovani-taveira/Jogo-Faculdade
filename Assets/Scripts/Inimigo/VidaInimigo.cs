@@ -9,6 +9,7 @@ public class VidaInimigo : MonoBehaviour
     public static float vidaInimigo = 100;
     public static float vidaAtualInimigo = 100;
     public Image barraVidaInimigo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,7 @@ public class VidaInimigo : MonoBehaviour
             barraVidaInimigo.fillAmount -= 0.25f;
             MovimentaBala.AcertouInimigo = false;
         }
+
+        //barraVidaInimigo.fillAmount = (1/vidaInimigo) * vidaAtualInimigo;
     }
 }

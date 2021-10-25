@@ -41,17 +41,17 @@ public class Inimigo : MonoBehaviour
 
         }
 
-        if(MovimentaBala.DestruiuInimigo == true)
-        {
-            VerficaGeracaoKitMedico(porcentagemGerarKit);
-        }
+        // if(MovimentaBala.DestruiuInimigo == true)
+        // {
+        //     VerficaGeracaoKitMedico(porcentagemGerarKit);
+        // }
     }
 
-    public void VerficaGeracaoKitMedico(float porcentagemGeracao)
-    {
-        if(Random.value <= porcentagemGeracao)
-        {
-            Instantiate(KitMedico, transform.position, Quaternion.identity);
-        }
-    }
+    // public void VerficaGeracaoKitMedico(float porcentagemGeracao)
+    // {
+    //     if(Random.value <= porcentagemGeracao)
+    //     {
+    //         Instantiate(KitMedico, transform.position, Quaternion.identity);
+    //     }
+    // }
 }
