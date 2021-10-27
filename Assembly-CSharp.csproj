@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\KitMedico.cs" />
      <Compile Include="Assets\Scripts\MovimentaBala.cs" />
      <Compile Include="Assets\Scripts\OutrasAcoes.cs" />
+     <Compile Include="Assets\Scripts\TeseTeste.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />

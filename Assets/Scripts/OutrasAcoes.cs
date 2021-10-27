@@ -57,6 +57,7 @@ public class OutrasAcoes : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+        EstaPausado = false;
     }
 
     public void ConfigVoltar()

@@ -10,6 +10,7 @@ public class ControlaVida : MonoBehaviour
     public Image barraVida;
     public GameObject InterfaceMorte;
     public Text Txt_Vida;
+    public Animator animacao;
 
     
     void Start()
@@ -39,6 +40,7 @@ public class ControlaVida : MonoBehaviour
         //Destruindo o Inimigo
         if(colisor.gameObject.tag == "Inimigo")
         {
+            animacao.SetInteger("Transition", 4);
             Vida -= 10;
             barraVida.fillAmount -= 0.1f;
         }
@@ -50,10 +52,6 @@ public class ControlaVida : MonoBehaviour
             Vida = 0;
             Time.timeScale = 0;
             InterfaceMorte.SetActive(true); 
-            // if(Input.GetKeyDown(KeyCode.Space))
-            // {
-            //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            // }     
         }
     } 
 }

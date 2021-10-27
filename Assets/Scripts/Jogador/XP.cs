@@ -12,6 +12,7 @@ public class XP : MonoBehaviour
     public Image BarraXP;
     private int velocidade = 2;
     public Text TextoNivel;
+    public Text Txt_XP;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class XP : MonoBehaviour
             BarraXP.fillAmount =  0 + (1/xpNecessario) * XPAtual;
         
         AdicionaXP();
-        AtualizaXP();              
+        AtualizaXP();   
+        Txt_XP.text = $"XP: {XPAtual.ToString("0")}/{XPNivel.ToString("0")}";           
     }
 
     public void AdicionaXP()
