@@ -5,26 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class ControlaVida : MonoBehaviour
 {
-    public int VidaInicial = 100;
-    public static int Vida = 100;
+    public static int VidaInicial = 400;
+    public static int Vida;
     public Image barraVida;
     public GameObject InterfaceMorte;
     public Text Txt_Vida;
     public Animator animacao;
-
-    
+ 
     void Start()
     {
-        Vida = 100; 
+        Vida = VidaInicial; 
+        barraVida.fillAmount = 1;
     }
 
     void Update()
     {
         ControladorVida();
-        if(KitMedico.PegouKit == true && Vida < 100)
+        if(KitMedico.PegouKit == true && Vida < VidaInicial)
         {
             Vida += 30;
-            barraVida.fillAmount += 0.3f;
             KitMedico.PegouKit = false;
             if(Vida > VidaInicial)
             {
@@ -32,19 +31,18 @@ public class ControlaVida : MonoBehaviour
             }
         }
         Txt_Vida.text = $"{Vida} / {VidaInicial}";
-
+        barraVida.fillAmount = (1/(float)VidaInicial) * Vida;
     }
 
     void OnCollisionEnter(Collision colisor)
     {
-        //Destruindo o Inimigo
         if(colisor.gameObject.tag == "Inimigo")
         {
             animacao.SetInteger("Transition", 4);
             Vida -= 10;
-            barraVida.fillAmount -= 0.1f;
         }
     }
+
     void ControladorVida()
     {
         if(Vida <= 0) 

@@ -48,11 +48,11 @@ public class Jogador : MonoBehaviour
  
     private void MovimentaJogador()
     {
-        animacao.SetInteger("Transition", 0);
+        animacao.SetFloat("Blend", 0);
 
         if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
         {
-            animacao.SetInteger("Transition", 1);
+            animacao.SetFloat("Blend", 0);
             Velocidade = 8;
             estaAndando = true;
             estaParado = false;
@@ -61,7 +61,7 @@ public class Jogador : MonoBehaviour
             {    
                 if(Stamina >= 0)
                 {
-                    animacao.SetInteger("Transition", 2);
+                    animacao.SetFloat("Blend", 1);
 
                     Velocidade = 14;
                     estaParado = false;
@@ -74,7 +74,7 @@ public class Jogador : MonoBehaviour
             {
                 Velocidade = 8;
                 estaAndando = true;
-
+                //animacao.SetFloat("Blend", 0);
                 if(estaAndando == true)
                 {
                     estaParado = false;

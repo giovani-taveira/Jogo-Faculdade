@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogador: {fileID: 4944807643531597618, guid: 1fb3db079bb711542a5a3948177600ab, type: 3}
   velocidade: 5
-  porcentagemGerarKit: 0.9
+  porcentagemGerarKit: 90
   KitMedico: {fileID: 1060151288946202, guid: 3553aad701cea1d4299943102106aac0, type: 3}
 --- !u!54 &1221806182647767790
 Rigidbody:

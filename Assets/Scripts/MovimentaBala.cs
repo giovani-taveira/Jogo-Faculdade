@@ -7,13 +7,14 @@ public class MovimentaBala : MonoBehaviour
     public static bool DestruiuInimigo = false;
     public static bool AcertouInimigo = false;
     public static bool acabouVida = false;
+    public GameObject inimigo;
 
 
     void FixedUpdate()
     {
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position +
             transform.forward * Velocidade * Time.deltaTime);
-        //AdicionaXP(); 
+
     }
 
     public void OnTriggerEnter(Collider colisor)
@@ -29,6 +30,7 @@ public class MovimentaBala : MonoBehaviour
             {
                 Destroy(colisor.gameObject);
                 DestruiuInimigo = true;
+                acabouVida = true;
             }
         }
         //Destruindo a Bala;

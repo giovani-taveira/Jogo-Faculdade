@@ -6,30 +6,33 @@ using UnityEngine.UI;
 [ExecuteAlways]
 public class VidaInimigo : MonoBehaviour
 {
-    public static float vidaInimigo = 100;
-    public static float vidaAtualInimigo = 100;
+    public static int vidaInimigo = 100;
+    public static int vidaAtualInimigo;
     public Image barraVidaInimigo;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
-        //barraVidaInimigo.fillAmount = 1;
+        vidaAtualInimigo = vidaInimigo;
+        barraVidaInimigo.fillAmount = 1;
     }
 
-    // Update is called once per frame
+
     void LateUpdate()
     {
         Vector3 lookAtTarget = transform.position + Camera.main.transform.forward;
         transform.LookAt(lookAtTarget, Camera.main.transform.up);
+
+        
     }
 
     void Update()
     {
-        if(MovimentaBala.AcertouInimigo == true && vidaInimigo > 0)
+        if(MovimentaBala.AcertouInimigo == true && vidaAtualInimigo > 0)
         {
             vidaAtualInimigo -= 35;
-            barraVidaInimigo.fillAmount -= 0.25f;
+            barraVidaInimigo.fillAmount = (1/(float)vidaInimigo) * vidaAtualInimigo;
+            // barraVidaInimigo.fillAmount -= 0.25f;
             MovimentaBala.AcertouInimigo = false;
         }
 
