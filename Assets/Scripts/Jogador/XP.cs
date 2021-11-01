@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class XP : MonoBehaviour
 {
+    #region "Variaveis"
     public float XPNivel = 100;
     public float XPAtual;
     public float xpNecessario;
@@ -13,6 +14,7 @@ public class XP : MonoBehaviour
     private int velocidade = 2;
     public Text TextoNivel;
     public Text Txt_XP;
+    #endregion
 
     void Start()
     {

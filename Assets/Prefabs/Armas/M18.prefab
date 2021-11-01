@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 662136976166188678}
+  - component: {fileID: 7763585925270080244}
   m_Layer: 0
   m_Name: M18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &662136976166188678
 Transform:
   m_ObjectHideFlags: 0
@@ -24,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178933142608489532}
   m_LocalRotation: {x: 0.7183416, y: -0.5845116, z: 0.16323587, w: 0.340126}
-  m_LocalPosition: {x: -0.067, y: -0.069, z: 0.037}
+  m_LocalPosition: {x: -0.076, y: -0.104, z: -0}
   m_LocalScale: {x: 3.0796437, y: 1.8870788, z: 2.3923995}
   m_Children:
   - {fileID: 1284732020238433367}
@@ -41,6 +42,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 137.197, y: 12.8439, z: 83.322}
+--- !u!114 &7763585925270080244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178933142608489532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659af20d96d736342a2270561de5e23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bala: {fileID: 5560465191496539843, guid: fe955eb490ba7934fa7fecc5fca3eab1, type: 3}
+  ReferenciaBala: {fileID: 178933142608489532}
+  MaxMunicaoNoPente: 16
+  MunicaoNoPente: 16
+  Municao: 64
+  TempoRecarregar: 15
 --- !u!1 &488778230973755006
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +390,8 @@ Transform:
   m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
   m_LocalPosition: {x: 2.727949e-10, y: -0.0043050367, z: 0.03416982}
   m_LocalScale: {x: 5.744647, y: 5.744647, z: 5.744647}
-  m_Children: []
+  m_Children:
+  - {fileID: 7053732031130851686}
   m_Father: {fileID: 662136976166188678}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1072,6 +1092,36 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00019218074, y: 0.0023609805, z: 0.003159726}
     m_Extent: {x: 0.002404492, y: 0.0010878462, z: 0.0025315713}
   m_DirtyAABB: 0
+--- !u!1 &5665490367207689817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7053732031130851686}
+  m_Layer: 0
+  m_Name: ReferenciaBala
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7053732031130851686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665490367207689817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.01246, z: 0.0055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9156300253680457365}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5968744805707461249
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class VidaInimigo : MonoBehaviour
     {
         if(MovimentaBala.AcertouInimigo == true && vidaAtualInimigo > 0)
         {
-            vidaAtualInimigo -= 35;
+            vidaAtualInimigo -= CaracteristicasArmas.DanoArma;
             barraVidaInimigo.fillAmount = (1/(float)vidaInimigo) * vidaAtualInimigo;
             // barraVidaInimigo.fillAmount -= 0.25f;
             MovimentaBala.AcertouInimigo = false;
