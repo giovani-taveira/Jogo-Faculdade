@@ -12,12 +12,12 @@ public class Inimigo : MonoBehaviour
     void Start()
     {
         //Faz com que quando um inimigo é gerado ele vá procurar o jogo através da tag 
-        jogador = GameObject.FindWithTag("Jogador");
+        
     }
 
     void Update()
     {
-        
+        jogador = GameObject.FindWithTag("Jogador");
     }
 
     void FixedUpdate()
