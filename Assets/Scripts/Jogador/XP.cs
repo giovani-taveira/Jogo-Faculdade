@@ -7,7 +7,7 @@ public class XP : MonoBehaviour
 {
     #region "Variaveis"
     public float XPNivel = 100;
-    public float XPAtual;
+    public static float XPAtual;
     public float xpNecessario;
     public int Nivel;
     public Image BarraXP;
@@ -33,12 +33,11 @@ public class XP : MonoBehaviour
 
     public void AdicionaXP()
     {
-        // if (MovimentaBala.DestruiuInimigo == true)
-        // {
-        //     XPAtual += 23;
-        //     BarraXP.fillAmount = (1/xpNecessario) * XPAtual;
-        //     MovimentaBala.DestruiuInimigo = false;
-        // }
+        if (VidaDoInimigo.DestruiuInimigo == true)
+        {
+            BarraXP.fillAmount = (1/xpNecessario) * XPAtual;
+            VidaDoInimigo.DestruiuInimigo = false;
+        }
     }
 
     public void AtualizaXP()

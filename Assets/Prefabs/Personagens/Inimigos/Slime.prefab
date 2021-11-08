@@ -9392,7 +9392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1abad5dfb901ae45ae2e447315c2548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaMaxInimigo: 200
+  VidaMaxInimigo: 100
   VidaAtualInimigo: 0
   TempoDestroiCorpo: 2.5
   ValorPontos: 10
