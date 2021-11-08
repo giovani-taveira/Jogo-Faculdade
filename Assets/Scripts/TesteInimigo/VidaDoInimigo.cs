@@ -12,6 +12,8 @@ public class VidaDoInimigo : MonoBehaviour
     public int ValorPontos = 10;
     //Aqui coloca o audio da morte 
     Animator anim;
+    //AudioSource AudioInimigo;
+    ParticleSystem ParticulaHit;
     CapsuleCollider capsuleCollider;
     bool EstaMorto;
     bool EstaAfundando;
@@ -19,7 +21,8 @@ public class VidaDoInimigo : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-        //componente audio
+        //AudioInimigo = GetComponent<AudioSource>();
+        ParticulaHit = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         VidaAtualInimigo = VidaMaxInimigo;
     }
@@ -38,10 +41,15 @@ public class VidaDoInimigo : MonoBehaviour
         if(EstaMorto)
             return;
 
-        //enemyAudio.Play();
+        //AudioInimigo.Play();
         VidaAtualInimigo -= dano;
+
+        ParticulaHit.transform.position = hitPoint;
+        ParticulaHit.Play();
+
         if(VidaAtualInimigo <= 0)
         {
+            // anim.SetInteger("Morte", 1);
             Morte();
         }
     }
@@ -52,6 +60,8 @@ public class VidaDoInimigo : MonoBehaviour
         capsuleCollider.isTrigger = true;
         AfundaCorpo();
 
+        // AudioInimigo.clip = deathClip;
+        // AudioInimigo.Play(); 
     }
 
     public void AfundaCorpo()

@@ -33,12 +33,12 @@ public class XP : MonoBehaviour
 
     public void AdicionaXP()
     {
-        if (MovimentaBala.DestruiuInimigo == true)
-        {
-            XPAtual += 23;
-            BarraXP.fillAmount = (1/xpNecessario) * XPAtual;
-            MovimentaBala.DestruiuInimigo = false;
-        }
+        // if (MovimentaBala.DestruiuInimigo == true)
+        // {
+        //     XPAtual += 23;
+        //     BarraXP.fillAmount = (1/xpNecessario) * XPAtual;
+        //     MovimentaBala.DestruiuInimigo = false;
+        // }
     }
 
     public void AtualizaXP()

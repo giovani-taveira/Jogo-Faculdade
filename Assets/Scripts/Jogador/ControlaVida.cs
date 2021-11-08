@@ -18,8 +18,9 @@ public class ControlaVida : MonoBehaviour
     public bool TomouDano;
     public Image ImagemDano;
     public float VelocidadeImagem = 5f;
-    public Color CorDano = new Color(1f, 0f, 0f, 0.1f);
+    public Color CorDano = new Color(1f, 0f, 0f, 1f);
     PlayerShoot palyerShooting;
+    
 
     void Awake()
     {
@@ -41,11 +42,14 @@ public class ControlaVida : MonoBehaviour
 
         if(TomouDano)
         {
+            ImagemDano.enabled = true;
+
             ImagemDano.color = CorDano;
         }
         else
         {
             ImagemDano.color = Color.Lerp(ImagemDano.color, Color.clear, VelocidadeImagem * Time.deltaTime);
+            ImagemDano.enabled = false;
         
         }
         TomouDano = false;

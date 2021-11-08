@@ -25,7 +25,7 @@ public class GeraInimigos : MonoBehaviour
         {
             Instantiate(Inimigo, transform.position, transform.rotation);
             Contador = 0;
-            VidaInimigo.vidaAtualInimigo = 100;
+            //VidaInimigo.vidaAtualInimigo = 100;
         }
     }
 }

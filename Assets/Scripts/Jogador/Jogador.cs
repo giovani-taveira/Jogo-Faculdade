@@ -108,6 +108,7 @@ public class Jogador : MonoBehaviour
         {
             Vector3 playerToMouse = hit.point - transform.position;
             playerToMouse.y = 0;
+
             Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
             rb.MoveRotation (newRotation);
 
