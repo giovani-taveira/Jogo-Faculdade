@@ -43,14 +43,11 @@ public class ControlaVida : MonoBehaviour
         if(TomouDano)
         {
             ImagemDano.enabled = true;
-
-            //ImagemDano.color = CorDano;
         }
         else
         {
             //ImagemDano.color = Color.Lerp(ImagemDano.color, Color.clear, VelocidadeImagem * Time.deltaTime);
             ImagemDano.enabled = false;
-        
         }
         TomouDano = false;
     }
@@ -83,21 +80,18 @@ public class ControlaVida : MonoBehaviour
     }
 
     void RecuperaVida()
-    {
-        
+    { 
         if(KitMedico.PegouKit == true)
         {
             ContadorKit += 1;   
             KitMedico.PegouKit = false;
         }
+
         if(ContadorKit > 0)
-        {
             TemKit = true;
-        }
         else
-        {
             TemKit = false;
-        }
+
         if(Input.GetKeyDown(KeyCode.Alpha4))
         {
             Kit.SetActive(true);
@@ -107,6 +101,7 @@ public class ControlaVida : MonoBehaviour
                 ContadorKit -= 1;
                 Vida += KitMedico.QuantidadeCura;
                 KitMedico.PegouKit = false;
+
                 if(Vida > VidaInicial)
                 {
                     Vida = VidaInicial;

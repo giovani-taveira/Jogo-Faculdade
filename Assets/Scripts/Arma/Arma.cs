@@ -46,5 +46,11 @@ public class Arma : MonoBehaviour
             animacao.SetInteger("Transition", 1);
             //ContadorMunição.enabled = true;
         }
+        if(Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            ArmaCurta.SetActive(false);
+            ArmaLonga.SetActive(false);
+            animacao.SetInteger("Transition", 0);
+        }
     }
 }

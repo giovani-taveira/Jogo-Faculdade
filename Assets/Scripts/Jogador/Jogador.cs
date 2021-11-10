@@ -9,7 +9,8 @@ public class Jogador : MonoBehaviour
     abaixo que so considera o chão*/
     public LayerMask MascaraChao;
     public Image barraStamina;
-    public float Stamina = 100;
+    public float MaxStamina;
+    private float Stamina;
     bool estaParado = true, estaAndando = false;
     public Animator animacao;
     public Text Txt_Stamina;
@@ -25,7 +26,7 @@ public class Jogador : MonoBehaviour
 
     void Start()
     {      
-        Stamina = 100; 
+        Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
     }
 
@@ -34,7 +35,8 @@ public class Jogador : MonoBehaviour
         MovimentaJogador();
         //RotacionaJogador();
         Rotaciona();
-        Txt_Stamina.text = $"{Stamina.ToString("0")} / 100";
+        Txt_Stamina.text = $"{Stamina.ToString("0")} / {MaxStamina}";
+        barraStamina.fillAmount = (1/MaxStamina) * Stamina;
 
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
@@ -67,7 +69,7 @@ public class Jogador : MonoBehaviour
                     estaParado = false;
                     estaAndando = false;
                     Stamina -= 0.8f;
-                    barraStamina.fillAmount -= 0.008f;
+                    
                 }
             }
             else
@@ -95,10 +97,9 @@ public class Jogador : MonoBehaviour
 
     void AumentaStamina()
     {
-        if(Stamina < 99)
+        if(Stamina < MaxStamina)
         {
             Stamina += 1;
-            barraStamina.fillAmount += 0.01f; 
         }
     }
 

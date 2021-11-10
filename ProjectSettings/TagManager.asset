@@ -9,6 +9,10 @@ TagManager:
   - Arma
   - Bala
   - Municao
+  - ZoomCamera
+  - Trigger
+  - Trigger2
+  - Trigger3
   layers:
   - Default
   - TransparentFX

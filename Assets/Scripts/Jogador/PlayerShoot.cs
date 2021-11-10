@@ -24,14 +24,17 @@ public class PlayerShoot : MonoBehaviour
     [Space]
     [Header("Munição")]
     public int MaxMunicao;
-    public int TempoRecarregar;
-    public int MaxMunicaoNoPente;
+    public int TempoRecarregar, MaxMunicaoNoPente;
+    [HideInInspector]
+    public int MunicaoAtual;
+    public static int MaxMunicao2, MunicaoAtual2;
     public Text ContadorMunicao;
     public bool ArmaAutomatica;
     public float CadenciaDeTiro;
-    private int MunicaoAtual, TimeTr, MunicaoNoPenteAtual;
+    private int TimeTr, MunicaoNoPenteAtual;
     private bool Recarregavel = true;
     private float ProximoTiro;
+    public static bool FoiRecarregado;
     #endregion
 
     void Awake()
@@ -44,54 +47,37 @@ public class PlayerShoot : MonoBehaviour
 
         MunicaoAtual = MaxMunicao;
         MunicaoNoPenteAtual = MaxMunicaoNoPente;
+        MaxMunicao2 = MaxMunicao;
+        MunicaoAtual2 = MunicaoAtual;
+        FoiRecarregado = false;
     }
 
     void Update()
     {
+        
         if(MunicaoAtual > MaxMunicao)
-        {
             MunicaoAtual = MaxMunicao;
+
+        if(CaixaMunicao.PegouMunicao && MunicaoAtual < MaxMunicao)
+        {
+            MunicaoAtual += MaxMunicaoNoPente;
+            CaixaMunicao.PegouMunicao = false;
+            FoiRecarregado = true;
         }
+
 
         ContadorMunicao.text = $"{MunicaoNoPenteAtual.ToString()}/{MunicaoAtual.ToString()}";
         timer += Time.deltaTime;
 
-        if(timer >= TempoPorTiro * DuracaoEfeitoDisparo)
-        {
-            DesativarEfeitos();
-        }
-
-        
-        if(ArmaAutomatica == false)
-        {
-            if((Input.GetMouseButtonDown(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
-            {
-                ProximoTiro = Time.time + CadenciaDeTiro;
-                audios.volume = 1f;
-                Shoot();
-                MunicaoNoPenteAtual -= 1;
-                
-            }
-        }
-        else
-        {
-            if((Input.GetMouseButton(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
-            {
-                ProximoTiro = Time.time + CadenciaDeTiro;
-                audios.volume = 1f;
-                Shoot();
-                MunicaoNoPenteAtual -= 1;
-            }
-        }
+        Cadencia();
+        RecarregaArma();
 
         if((Input.GetMouseButtonDown(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual <= 0 && Time.time > ProximoTiro)
         {
              audios.clip = SomSemBala;
              audios.volume = 0.5f;
              audios.Play();
-        }
-
-        RecarregaArma();    
+        }       
     }
     
     void RecarregaArma()
@@ -161,14 +147,41 @@ public class PlayerShoot : MonoBehaviour
         {
             VidaDoInimigo vidaInimigo = HitTiro.collider.GetComponent<VidaDoInimigo>();
             if(vidaInimigo != null)
-            {
                 vidaInimigo.RecebeDano(DanoPorTiro, HitTiro.point);
-            }
+
             LinhaArma.SetPosition(1, HitTiro.point);
         }
         else
         {
             LinhaArma.SetPosition(1,RaioTiro.origin + RaioTiro.direction * Alcance); 
         }
+    }
+
+    void Cadencia()
+    {
+        if(ArmaAutomatica == false)
+        {
+            if((Input.GetMouseButtonDown(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
+            {
+                ProximoTiro = Time.time + CadenciaDeTiro;
+                audios.volume = 1f;
+                Shoot();
+                MunicaoNoPenteAtual -= 1;
+                
+            }
+        }
+        else
+        {
+            if((Input.GetMouseButton(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
+            {
+                ProximoTiro = Time.time + CadenciaDeTiro;
+                audios.volume = 1f;
+                Shoot();
+                MunicaoNoPenteAtual -= 1;
+            }
+        }
+
+        if(timer >= TempoPorTiro * DuracaoEfeitoDisparo)
+            DesativarEfeitos();
     }
 }

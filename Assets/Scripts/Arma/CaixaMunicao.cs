@@ -16,7 +16,11 @@ public class CaixaMunicao : MonoBehaviour
         if(Input.GetKeyDown("e") &&  colisor.gameObject == jogador.gameObject)
         {
             PegouMunicao = true;
-            Destroy(gameObject);
+            if(PlayerShoot.FoiRecarregado == true)
+            {
+                Destroy(gameObject);
+                PlayerShoot.FoiRecarregado = false;
+            }
         }
     }
 }
