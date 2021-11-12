@@ -92,7 +92,7 @@ public class ControlaVida : MonoBehaviour
         else
             TemKit = false;
 
-        if(Input.GetKeyDown(KeyCode.Alpha4))
+        if(Input.GetKeyDown(KeyCode.Mouse0) && Arma.KitEquipado == true)
         {
             Kit.SetActive(true);
             animacao.SetInteger("Transition", 0);

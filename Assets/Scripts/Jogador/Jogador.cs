@@ -20,6 +20,8 @@ public class Jogador : MonoBehaviour
     public float vertical;
     public float horizontal;
 
+    public Text Txt_Materiais;
+
     Vector3 arma;
     #endregion
 
@@ -46,6 +48,8 @@ public class Jogador : MonoBehaviour
         {
             arma = movimento;
         }
+
+        Txt_Materiais.text = $"Materiais: {Materiais.MateriaisAtuais}";
     }
  
     private void MovimentaJogador()

@@ -28,7 +28,7 @@ public class XP : MonoBehaviour
         
         AdicionaXP();
         AtualizaXP();   
-        Txt_XP.text = $"XP: {XPAtual.ToString("0")}/{XPNivel.ToString("0")}";           
+        Txt_XP.text = $"XP: {XPAtual.ToString("0")}/{XPNivel.ToString("0")}";         
     }
 
     public void AdicionaXP()

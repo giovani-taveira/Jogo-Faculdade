@@ -18,6 +18,9 @@ public class VidaDoInimigo : MonoBehaviour
     bool EstaMorto;
     public static bool DestruiuInimigo;
     bool EstaAfundando;
+    public GameObject[] ItemDrop;
+
+    public int ChanceDropItem = 0;
 
     void Awake()
     {
@@ -57,6 +60,13 @@ public class VidaDoInimigo : MonoBehaviour
 
     public void Morte()
     {
+        DestruiuInimigo = true;
+        int random = Random.Range(0, 10);
+        if(random < ChanceDropItem && ItemDrop.Length > 0)
+        {
+           Instantiate(ItemDrop[Random.Range(0, ItemDrop.Length)], transform.position, Quaternion.identity);
+        }
+
         EstaMorto = true;
         capsuleCollider.isTrigger = true;
         AfundaCorpo();
