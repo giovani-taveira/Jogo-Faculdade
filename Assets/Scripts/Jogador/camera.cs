@@ -14,7 +14,7 @@ public class camera : MonoBehaviour
     // public bool ApareceInteface = false;
     public GameObject InterfaceGameplay;
     public bool ComZoom;
-    public GameObject Spawn1;
+    //public GameObject Spawn1;
 
     void Start()
     {

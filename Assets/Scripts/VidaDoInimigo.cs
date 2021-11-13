@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class VidaDoInimigo : MonoBehaviour
 {
-
     public int VidaMaxInimigo = 100;
     public int VidaAtualInimigo;
     public float TempoDestroiCorpo = 2.5f;

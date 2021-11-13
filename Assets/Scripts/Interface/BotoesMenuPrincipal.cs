@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BotoesMenuPrincipal : MonoBehaviour
 {
+    public GameObject InterfaceMenuPrincipal;
+    public GameObject InterfaceConfig;
 
     public void Iniciar()
     {
@@ -12,4 +14,22 @@ public class BotoesMenuPrincipal : MonoBehaviour
         Time.timeScale = 1;
         OutrasAcoes.EstaPausado = false;
     }
+
+    public void Config()
+    {
+        InterfaceMenuPrincipal.SetActive(false);
+        InterfaceConfig.SetActive(true);
+    }
+
+    public void ConfigVoltar()
+    {
+        InterfaceConfig.SetActive(false);
+        InterfaceMenuPrincipal.SetActive(true);
+    }
+
+    public void Sair()
+    {
+        Application.Quit();
+    }
+
 }
