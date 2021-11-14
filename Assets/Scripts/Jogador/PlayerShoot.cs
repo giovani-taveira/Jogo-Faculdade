@@ -31,7 +31,7 @@ public class PlayerShoot : MonoBehaviour
     public Text ContadorMunicao;
     public bool ArmaAutomatica;
     public float CadenciaDeTiro;
-    private int TimeTr, MunicaoNoPenteAtual;
+    public int TimeTr, MunicaoNoPenteAtual;
     private bool Recarregavel = true;
     private float ProximoTiro;
     public static bool FoiRecarregado;
@@ -52,6 +52,10 @@ public class PlayerShoot : MonoBehaviour
         FoiRecarregado = false;
     }
 
+    void Start()
+    {
+
+    }
     void Update()
     {
         
@@ -77,7 +81,7 @@ public class PlayerShoot : MonoBehaviour
              audios.clip = SomSemBala;
              audios.volume = 0.5f;
              audios.Play();
-        }       
+        }     
     }
     
     void RecarregaArma()
@@ -183,5 +187,20 @@ public class PlayerShoot : MonoBehaviour
 
         if(timer >= TempoPorTiro * DuracaoEfeitoDisparo)
             DesativarEfeitos();
+    }
+
+    public void SavePrefs(int id)
+    {
+        PlayerPrefs.SetInt("MunicaoAtual", MunicaoAtual);
+        PlayerPrefs.SetInt("MunicaoPente", MunicaoNoPenteAtual);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadPrefs(int id)
+    {
+        int mx = PlayerPrefs.GetInt("MunicaoAtual");
+        int mp = PlayerPrefs.GetInt("MunicaoPente");
+        MunicaoAtual = mx;
+        MunicaoNoPenteAtual = mp;
     }
 }

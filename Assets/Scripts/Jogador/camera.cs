@@ -45,7 +45,6 @@ public class camera : MonoBehaviour
             offset.y = 20;
             offset.x = 10;
             velocidade = 3;
-            InterfaceGameplay.SetActive(false);
             ComZoom = false;
             ControlaEventos.Zoom = false;
         }
@@ -55,7 +54,6 @@ public class camera : MonoBehaviour
             offset.x = 16;
             offset.z = -2;
             velocidade = 2;
-            InterfaceGameplay.SetActive(true);
             ComZoom = true;
             ControlaEventos.Zoom = false;
         } 

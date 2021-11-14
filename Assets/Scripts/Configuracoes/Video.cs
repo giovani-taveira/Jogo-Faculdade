@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Video : MonoBehaviour
@@ -15,10 +16,29 @@ public class Video : MonoBehaviour
     public Button ModoJanela;
     public int Tela;
 
+     void awake()
+     {
+         ddpResolution.onValueChanged.AddListener(new UnityAction<int>(index =>
+         {
+             PlayerPrefs.SetInt("Res", ddpResolution.value);
+             PlayerPrefs.Save();
+         }));
+    }
+
     void Start()
     {
+        //Obtendo valores salvos
         int tela = (PlayerPrefs.GetInt("Tela"));
 
+        int value = PlayerPrefs.GetInt("Graficos");
+        ddpQuality.value = value;
+        Debug.Log(ddpQuality.value);
+
+        int resolution = PlayerPrefs.GetInt("Res", 0);
+        ddpResolution.value = resolution;
+        Debug.Log(ddpResolution.value);
+
+        //Iniciando com um dos botões de modo janela ou fullscreen selecionados
         if(tela == 0)
         {
             TelaCheia.GetComponent<Image>().color = Color.white;
@@ -30,17 +50,13 @@ public class Video : MonoBehaviour
             ModoJanela.GetComponent<Image>().color = Color.white;
         }
 
-        int value = PlayerPrefs.GetInt("Graficos");
-        ddpQuality.value = value;
-        Debug.Log(ddpQuality.value);
-
-        PlayerPrefs.GetString("Resolucao");
-
+        //Preenchumento da lista de resoluções  e de graficos
         Resolution[] ArrayResolucoes = Screen.resolutions;
 
         foreach(Resolution r in ArrayResolucoes)
         {
             resolucoes.Add(string.Format("{0} X {1}", r.width, r.height));
+            Debug.Log(r);
         }
 
         ddpResolution.AddOptions(resolucoes);
@@ -49,11 +65,6 @@ public class Video : MonoBehaviour
         graficos = QualitySettings.names.ToList<String>();
         ddpQuality.AddOptions(graficos);
         ddpQuality.value = QualitySettings.GetQualityLevel();
-    }
-
-    void Update()
-    {
-        
     }
 
     public void ModoTelaCheia()
@@ -90,6 +101,8 @@ public class Video : MonoBehaviour
         int w = Convert.ToInt16(res[0].Trim());
         int h = Convert.ToInt16(res[1].Trim());
         Screen.SetResolution(w, h, Screen.fullScreen);
+        PlayerPrefs.SetInt("Resolucao", ddpResolution.value);
+        PlayerPrefs.Save();      
     }
 
     public void SetaGrafico()

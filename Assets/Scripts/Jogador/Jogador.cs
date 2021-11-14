@@ -30,6 +30,8 @@ public class Jogador : MonoBehaviour
     {      
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
+        LoadPrefs();
+        //SavePrefs();
     }
 
     void FixedUpdate()
@@ -50,6 +52,12 @@ public class Jogador : MonoBehaviour
         }
 
         Txt_Materiais.text = $"Materiais: {Materiais.MateriaisAtuais}";
+
+        if(ControlaEventos.SalvaPosicao)
+        {
+            SavePrefs();
+            ControlaEventos.SalvaPosicao = false;
+        }
     }
  
     private void MovimentaJogador()
@@ -135,5 +143,19 @@ public class Jogador : MonoBehaviour
     {
         animacao.SetFloat("Horizontal", horizontal);
         animacao.SetFloat("Vertical", vertical);
+    }
+
+    void SavePrefs()
+    {
+        PlayerPrefs.SetFloat("PosX", transform.position.x);
+        PlayerPrefs.SetFloat("PosY", transform.position.y);
+        PlayerPrefs.SetFloat("PosZ", transform.position.z);
+        PlayerPrefs.Save();
+    }
+
+    void LoadPrefs()
+    {
+        Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
+        transform.position = pos;
     }
 }

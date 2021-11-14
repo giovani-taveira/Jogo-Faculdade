@@ -11,6 +11,10 @@ public class ControlaEventos : MonoBehaviour
     public static bool Zoom;
     public Animator animacao;
     public Text Txt_PegarItem;
+    public static bool SalvaXP;
+    public static bool SalvaVida;
+    public static bool SalvaMunicao;
+    public static bool SalvaPosicao;
 
 
     void Start()
@@ -60,6 +64,14 @@ public class ControlaEventos : MonoBehaviour
             Txt_PegarItem.text = "Aperte (e) para pegar o item";
         }
 
+        if(colider.gameObject.tag == "CheckPoint")
+        {
+            
+            SalvaXP = true;
+            SalvaVida = true;
+            SalvaMunicao = true;
+            SalvaPosicao = true;
+        }
     }
     void OnTriggerExit()
     {

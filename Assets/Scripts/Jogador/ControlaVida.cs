@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ControlaVida : MonoBehaviour
 {
-    public static int VidaInicial = 400;
+    #region "Variaveis"
+    public int VidaInicial = 400;
     public static int Vida;
     public Image barraVida;
     public GameObject InterfaceMorte;
@@ -20,16 +21,26 @@ public class ControlaVida : MonoBehaviour
     public float VelocidadeImagem = 5f;
     //public Color CorDano = new Color(1f, 0f, 0f, 0.1f);
     PlayerShoot palyerShooting;
+    #endregion
     
-
     void Awake()
     {
         palyerShooting = GetComponentInChildren<PlayerShoot>();
     }
+
     void Start()
     {
-        Vida = 200; 
-        barraVida.fillAmount = 1;
+        if(PlayerPrefs.HasKey("VidaMax"))
+        {
+            LoadPrefs();
+      
+        }
+        else
+        {
+            Vida = VidaInicial;
+            Debug.Log("Perdemo");
+            SavePrefs();
+        }
     }
 
     void Update()
@@ -50,6 +61,12 @@ public class ControlaVida : MonoBehaviour
             ImagemDano.enabled = false;
         }
         TomouDano = false;
+
+        if(ControlaEventos.SalvaVida)
+        {
+            SavePrefs();
+            ControlaEventos.SalvaVida = false;
+        }
     }
 
     void OnCollisionEnter(Collision colisor)
@@ -73,6 +90,7 @@ public class ControlaVida : MonoBehaviour
     {
         TomouDano = true;
         Vida -= DanoSofrido;
+
         if(Vida <= 0)
         {
             Morte();
@@ -108,5 +126,25 @@ public class ControlaVida : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SavePrefs()
+    {
+        PlayerPrefs.SetInt("Vida", Vida);
+        PlayerPrefs.SetInt("VidaMax", VidaInicial);
+
+        PlayerPrefs.SetInt("QtdKit", ContadorKit);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadPrefs()
+    {
+        int vi = PlayerPrefs.GetInt("Vida");
+        int vm = PlayerPrefs.GetInt("VidaMax");
+        int QtdKit =PlayerPrefs.GetInt("QtdKit");
+
+        ContadorKit = QtdKit;
+        Vida = vi;
+        VidaInicial = vm;
     }
 }
