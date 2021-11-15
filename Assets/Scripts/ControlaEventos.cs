@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,10 +15,12 @@ public class ControlaEventos : MonoBehaviour
     public static bool SalvaVida;
     public static bool SalvaMunicao;
     public static bool SalvaPosicao;
+    public static bool AtivaDialogos = false;
 
 
     void Start()
     {
+         
         Spawn1.SetActive(false);
         Spawn2.SetActive(false);
         Spawn3.SetActive(false);
@@ -64,6 +66,13 @@ public class ControlaEventos : MonoBehaviour
             Txt_PegarItem.text = "Aperte (e) para pegar o item";
         }
 
+        if(colider.gameObject.tag == "Frank")
+        {
+            Txt_PegarItem.enabled = true;
+            Txt_PegarItem.text = "Aperte (e) para interagir";
+            AtivaDialogos = true;
+        }
+
         if(colider.gameObject.tag == "CheckPoint")
         {
             
@@ -76,5 +85,6 @@ public class ControlaEventos : MonoBehaviour
     void OnTriggerExit()
     {
         Txt_PegarItem.enabled = false;
+        AtivaDialogos = false;
     }
 }

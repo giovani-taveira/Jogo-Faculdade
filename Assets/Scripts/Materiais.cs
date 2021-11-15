@@ -11,17 +11,30 @@ public class Materiais : MonoBehaviour
     public static int QuantidadeMaterial = 10;
     public static int MateriaisAtuais;
 
-    // Start is called before the first frame update
     void Start()
     {
-        MateriaisAtuais = 0;
         QuantidadeMaterial = Qtd_Material;
+
+       if(PlayerPrefs.HasKey("Materiais"))
+        {
+            LoadPrefs();   
+            Debug.Log("Hello World");
+        }
+        else
+        {
+            MateriaisAtuais = 0;
+            SavePrefs();
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if(ControlaEventos.SalvaPosicao)
+        {
+            SavePrefs();
+            ControlaEventos.SalvaPosicao = false;
+        }
     }
 
     private void OnTriggerStay(Collider colisor)
@@ -33,5 +46,16 @@ public class Materiais : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    void SavePrefs()
+    {
+        PlayerPrefs.SetInt("Materiais", MateriaisAtuais);
+        PlayerPrefs.Save();
+    }
+    void LoadPrefs()
+    {
+        int mat = PlayerPrefs.GetInt("Materiais");
+        MateriaisAtuais = mat;
     }
 }

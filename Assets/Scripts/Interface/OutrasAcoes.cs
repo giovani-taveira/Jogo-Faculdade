@@ -10,22 +10,44 @@ public class OutrasAcoes : MonoBehaviour
     public GameObject InterfaceConfig;
     public GameObject InterfaceGameplay;
     private bool ClicouRetomar = false;
+    private bool EstaNaConfig;
+    private bool ClicouVoltarConfig = false;
+    private bool ClicouConfig = false;
 
     void Update()
     {
         PausaJogo();
+
+        if(ClicouConfig)
+            EstaNaConfig = true;
+
+
+        if(ClicouVoltarConfig)
+        {
+            EstaNaConfig = false;
+            InterfaceConfig.SetActive(false);
+            InterfacePause.SetActive(true);
+        }
+
+
+        if(EstaNaConfig && Input.GetKeyDown(KeyCode.Escape))
+        {
+            ClicouVoltarConfig = true;
+            
+        }
     }
 
     void PausaJogo()
     {   
-        if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == false)
+        if(Input.GetKeyDown(KeyCode.Escape) && !EstaPausado && !EstaNaConfig)
         {
             Time.timeScale = 0;
             InterfacePause.SetActive(true);
             InterfaceGameplay.SetActive(false);
             EstaPausado = true;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado == true)
+
+        else if(Input.GetKeyDown(KeyCode.Escape) && EstaPausado)
         {
             Time.timeScale = 1;
             InterfacePause.SetActive(false);
@@ -40,10 +62,10 @@ public class OutrasAcoes : MonoBehaviour
         {
             ClicouRetomar = true;
             Time.timeScale = 1;
-            Debug.Log("Apertou");
             EstaPausado = false;
             ClicouRetomar = false;
             InterfacePause.SetActive(false);
+            InterfaceGameplay.SetActive(true);
         }
     }
 
@@ -51,19 +73,26 @@ public class OutrasAcoes : MonoBehaviour
     {
         InterfacePause.SetActive(false);
         InterfaceConfig.SetActive(true);
+        ClicouConfig =  true;
+        EstaNaConfig = true;
+
     }
 
     public void Reiniciar()
     {
-        SceneManager.LoadScene(0);
+        string cena = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(cena);
         Time.timeScale = 1;
         EstaPausado = false;
+        InterfacePause.SetActive(false);
     }
 
     public void ConfigVoltar()
     {
         InterfaceConfig.SetActive(false);
         InterfacePause.SetActive(true);
+        EstaNaConfig = false;
+        ClicouVoltarConfig = true;
     }
 
     public void Sair()

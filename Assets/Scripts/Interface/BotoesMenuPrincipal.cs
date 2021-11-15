@@ -13,6 +13,8 @@ public class BotoesMenuPrincipal : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
         OutrasAcoes.EstaPausado = false;
+        string cena = PlayerPrefs.GetString("Cena");
+        SceneManager.LoadScene(cena);
     }
 
     public void Config()

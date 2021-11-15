@@ -32,13 +32,11 @@ public class ControlaVida : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("VidaMax"))
         {
-            LoadPrefs();
-      
+            LoadPrefs(); 
         }
         else
         {
             Vida = VidaInicial;
-            Debug.Log("Perdemo");
             SavePrefs();
         }
     }

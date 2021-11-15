@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
@@ -77,7 +78,7 @@ public class Jogador : MonoBehaviour
                 {
                     animacao.SetFloat("Blend", 1);
 
-                    Velocidade = 14;
+                    Velocidade = 15;
                     estaParado = false;
                     estaAndando = false;
                     Stamina -= 0.8f;
@@ -147,9 +148,11 @@ public class Jogador : MonoBehaviour
 
     void SavePrefs()
     {
+        string cena = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetFloat("PosX", transform.position.x);
         PlayerPrefs.SetFloat("PosY", transform.position.y);
         PlayerPrefs.SetFloat("PosZ", transform.position.z);
+        PlayerPrefs.SetString("Cena", cena);
         PlayerPrefs.Save();
     }
 
@@ -157,5 +160,6 @@ public class Jogador : MonoBehaviour
     {
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
+        PlayerPrefs.GetString("Cena");
     }
 }

@@ -36,22 +36,39 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Demo\Scripts\MovingImage.cs" />
-     <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\UIBlur.cs" />
-     <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\UIBlurWithCanvasGroup.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\GunAim.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\GunShoot.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\Outros\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Outros\Krivodeling\UI\Effects\Blur\Demo\Scripts\MovingImage.cs" />
+     <Compile Include="Assets\Outros\Krivodeling\UI\Effects\Blur\Scripts\UIBlur.cs" />
+     <Compile Include="Assets\Outros\Krivodeling\UI\Effects\Blur\Scripts\UIBlurWithCanvasGroup.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\Resizer.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
+     <Compile Include="Assets\Outros\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
      <Compile Include="Assets\Scripts\Arma\Arma.cs" />
      <Compile Include="Assets\Scripts\Arma\CaixaMunicao.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\ControlaVolume.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\Video.cs" />
      <Compile Include="Assets\Scripts\ControlaEventos.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\Dialog.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\DialogContainer.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\DialogManager.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\DialogTrigger.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\Talker.cs" />
+     <Compile Include="Assets\Scripts\Dialogos\UIManager.cs" />
      <Compile Include="Assets\Scripts\DropItens.cs" />
      <Compile Include="Assets\Scripts\Inimigo\AtaqueInimigo.cs" />
      <Compile Include="Assets\Scripts\Inimigo\ControladorInimigo.cs" />
@@ -70,42 +87,31 @@
      <Compile Include="Assets\Scripts\TeseTeste.cs" />
      <Compile Include="Assets\Scripts\VidaDoInimigo.cs" />
      <Compile Include="Assets\Scripts\VidaInimigo.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\Resizer.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Krivodeling\UI\Effects\Blur\Readme.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
-     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Krivodeling\UI\Effects\Blur\Shaders\UIBlur.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Outros\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
+     <None Include="Assets\Outros\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Outros\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Outros\Krivodeling\UI\Effects\Blur\Readme.txt" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Outros\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
+     <None Include="Assets\Outros\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Outros\Krivodeling\UI\Effects\Blur\Shaders\UIBlur.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -290,16 +296,16 @@
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="GLTFSerialization">
-        <HintPath>C:/JogoFaculdade2/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip.Unity">
-        <HintPath>C:/JogoFaculdade2/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/JogoFaculdade2/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Unity">
+        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
     </Reference>
     <Reference Include="SketchfabPlugin">
-        <HintPath>C:/JogoFaculdade2/Assets/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
+        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

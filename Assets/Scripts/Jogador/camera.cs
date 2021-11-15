@@ -14,18 +14,16 @@ public class camera : MonoBehaviour
     // public bool ApareceInteface = false;
     public GameObject InterfaceGameplay;
     public bool ComZoom;
-    //public GameObject Spawn1;
 
     void Start()
     {
         ComZoom = false;
-        //InterfaceGameplay.SetActive(false);
 
         offset.y = 30;
         offset.x = 16;
         offset.z = -2;
         velocidade = 2;
-        InterfaceGameplay.SetActive(false);
+        //InterfaceGameplay.SetActive(false);
 
     }
     void FixedUpdate()
