@@ -32,7 +32,6 @@ public class Jogador : MonoBehaviour
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
         LoadPrefs();
-        //SavePrefs();
     }
 
     void FixedUpdate()
@@ -52,7 +51,7 @@ public class Jogador : MonoBehaviour
             arma = movimento;
         }
 
-        Txt_Materiais.text = $"Materiais: {Materiais.MateriaisAtuais}";
+        Txt_Materiais.text = $"x{Materiais.MateriaisAtuais.ToString()}";
 
         if(ControlaEventos.SalvaPosicao)
         {
@@ -149,6 +148,7 @@ public class Jogador : MonoBehaviour
     void SavePrefs()
     {
         string cena = SceneManager.GetActiveScene().name;
+        
         PlayerPrefs.SetFloat("PosX", transform.position.x);
         PlayerPrefs.SetFloat("PosY", transform.position.y);
         PlayerPrefs.SetFloat("PosZ", transform.position.z);

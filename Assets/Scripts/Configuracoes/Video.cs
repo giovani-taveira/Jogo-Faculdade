@@ -18,39 +18,28 @@ public class Video : MonoBehaviour
 
      void awake()
      {
-         ddpResolution.onValueChanged.AddListener(new UnityAction<int>(index =>
-         {
-             PlayerPrefs.SetInt("Res", ddpResolution.value);
-             PlayerPrefs.Save();
-         }));
+        //  ddpResolution.onValueChanged.AddListener(new UnityAction<int>(index =>
+        //  {
+        //      PlayerPrefs.SetInt("Res", ddpResolution.value);
+        //      PlayerPrefs.Save();
+        //  }));
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     void Start()
     {
-        //Obtendo valores salvos
-        int tela = (PlayerPrefs.GetInt("Tela"));
-
-        int value = PlayerPrefs.GetInt("Graficos");
-        ddpQuality.value = value;
-        Debug.Log(ddpQuality.value);
-
-        int resolution = PlayerPrefs.GetInt("Res", 0);
-        ddpResolution.value = resolution;
-        Debug.Log(ddpResolution.value);
-
-        //Iniciando com um dos botões de modo janela ou fullscreen selecionados
-        if(tela == 0)
+        if(PlayerPrefs.HasKey("Res"))
         {
-            TelaCheia.GetComponent<Image>().color = Color.white;
-            ModoJanela.GetComponent<Image>().color = Color.gray;
+            LoadPrefs();
+            Debug.Log("Pegaeijhidjiwejdowe");
+            ddpQuality.value = PlayerPrefs.GetInt("Graficos");
         }
         else
         {
-            TelaCheia.GetComponent<Image>().color = Color.gray;
-            ModoJanela.GetComponent<Image>().color = Color.white;
+            SavePrefs();
         }
 
-        //Preenchumento da lista de resoluções  e de graficos
+
         Resolution[] ArrayResolucoes = Screen.resolutions;
 
         foreach(Resolution r in ArrayResolucoes)
@@ -64,7 +53,28 @@ public class Video : MonoBehaviour
 
         graficos = QualitySettings.names.ToList<String>();
         ddpQuality.AddOptions(graficos);
-        ddpQuality.value = QualitySettings.GetQualityLevel();
+        //ddpQuality.value = QualitySettings.GetQualityLevel();
+
+        if(Tela == 0)
+        {
+            TelaCheia.GetComponent<Image>().color = Color.white;
+            ModoJanela.GetComponent<Image>().color = Color.gray;
+        }
+        else
+        {
+            TelaCheia.GetComponent<Image>().color = Color.gray;
+            ModoJanela.GetComponent<Image>().color = Color.white;
+        }
+    }
+
+    void Update()
+    {
+        if(BotoesMenuPrincipal.salvarConfigs)
+        {
+            SavePrefs();
+            Debug.Log("Salvei A Config");
+            BotoesMenuPrincipal.salvarConfigs = false;
+        }
     }
 
     public void ModoTelaCheia()
@@ -76,8 +86,6 @@ public class Video : MonoBehaviour
             ModoJanela.GetComponent<Image>().color = Color.gray;
             Screen.fullScreen = true;
         }
-
-        PlayerPrefs.SetInt("Tela", 0);
         PlayerPrefs.Save();
     }
 
@@ -90,9 +98,6 @@ public class Video : MonoBehaviour
             ModoJanela.GetComponent<Image>().color = Color.white;
             Screen.fullScreen = false;
         }
-
-        PlayerPrefs.SetInt("Tela", 1);
-        PlayerPrefs.Save();
     }
 
     public void SetaResolucao()
@@ -100,15 +105,41 @@ public class Video : MonoBehaviour
         string[] res = resolucoes[ddpResolution.value].Split('X');
         int w = Convert.ToInt16(res[0].Trim());
         int h = Convert.ToInt16(res[1].Trim());
-        Screen.SetResolution(w, h, Screen.fullScreen);
-        PlayerPrefs.SetInt("Resolucao", ddpResolution.value);
-        PlayerPrefs.Save();      
+        Screen.SetResolution(w, h, Screen.fullScreen); 
     }
 
     public void SetaGrafico()
     {
         QualitySettings.SetQualityLevel(ddpQuality.value, true);
+    }
+
+    public void SavePrefs()
+    {
+        PlayerPrefs.SetInt("Tela", 0); 
+        PlayerPrefs.SetInt("Tela", 1);
+        PlayerPrefs.SetInt("Resolucao", ddpResolution.value);
         PlayerPrefs.SetInt("Graficos", ddpQuality.value);
         PlayerPrefs.Save();
+        
+    }
+
+    public void LoadPrefs()
+    {
+        int tela = (PlayerPrefs.GetInt("Tela"));
+        int resolution = PlayerPrefs.GetInt("Res", 0);
+        int value = PlayerPrefs.GetInt("Graficos", ddpQuality.value);
+
+        //ddpResolution.value = resolution;
+
+        if(tela == 0)
+        {
+            TelaCheia.GetComponent<Image>().color = Color.white;
+            ModoJanela.GetComponent<Image>().color = Color.gray;
+        }
+        else
+        {
+            TelaCheia.GetComponent<Image>().color = Color.gray;
+            ModoJanela.GetComponent<Image>().color = Color.white;
+        }
     }
 }

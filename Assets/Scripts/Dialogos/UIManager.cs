@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject UIContainer;
     public Image ImagemDoPersonagem;
     public TMP_Text NomePersonagem;
-    public TMP_Text Dialogo;
+    public Text Dialogo;
 
     void Awake()
     {
@@ -34,7 +34,6 @@ public class UIManager : MonoBehaviour
     private void TrocaPersonagem(Dialog TalkerInformations)
     {
         ImagemDoPersonagem.sprite = TalkerInformations.Talker.ImgemPersonagem;
-        NomePersonagem.text = TalkerInformations.Talker.name;
-        
+        NomePersonagem.text = TalkerInformations.Talker.name;     
     }
 }

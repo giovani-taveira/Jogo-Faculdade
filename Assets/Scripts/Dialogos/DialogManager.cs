@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour
     private DialogContainer CurrentDialog;
     private bool EndCurrentTalk = true;
     private bool ButtonClicked = false;
+
+    public static bool TerminouDialogo = false;
     void Awake()
     {
         Instance = this;
@@ -50,6 +52,7 @@ public class DialogManager : MonoBehaviour
         }
 
         EndCurrentTalk = true;
+        TerminouDialogo = true;
     }
 
     //gerencia a exibição dos dialogos

@@ -30,10 +30,10 @@ public class Materiais : MonoBehaviour
 
     void Update()
     {
-        if(ControlaEventos.SalvaPosicao)
+        if(ControlaEventos.SalvaMateriais)
         {
             SavePrefs();
-            ControlaEventos.SalvaPosicao = false;
+            ControlaEventos.SalvaMateriais = false;
         }
     }
 

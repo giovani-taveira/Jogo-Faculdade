@@ -15,8 +15,6 @@ public class ControladorInimigo : MonoBehaviour
     public int SpawnsZerados;
     public bool colidiu;
 
-
-
     void Start()
     {
         QuantidadeInimigoAtual = 0;
@@ -29,8 +27,7 @@ public class ControladorInimigo : MonoBehaviour
         if(SpawnsZerados == PontosDeSpawn.Length )
         {
             Debug.Log("Spwns Zerados");
-             //gameObject.tag == "Trigger4";
-            //gameObject.isTrigger = true;
+
         }
 
         if(VidaDoInimigo.DestruiuInimigo)
@@ -41,8 +38,6 @@ public class ControladorInimigo : MonoBehaviour
         if(InimigosMortos == MaxQuantidadoInimigo)
         {
             a = true;
-            
-            //Debug.Log("Inimigos Mortos");
         }  
         if(a)
         {
@@ -50,13 +45,7 @@ public class ControladorInimigo : MonoBehaviour
             a = false;
         }
     } 
-    // void OnCollisionEnter(Collision collision )
-    // {
-    //     if(collision.gameObject.tag == "Trigger4")
-    //     {
-    //         colidiu = true;
-    //     }
-    // }
+
 
     void Spawn()
     {

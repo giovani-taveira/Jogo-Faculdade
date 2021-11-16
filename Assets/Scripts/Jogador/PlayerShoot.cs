@@ -27,7 +27,7 @@ public class PlayerShoot : MonoBehaviour
     public int TempoRecarregar, MaxMunicaoNoPente;
     [HideInInspector]
     public int MunicaoAtual;
-    public static int MaxMunicao2, MunicaoAtual2;
+    public int [] MunicãoArray;
     public Text ContadorMunicao;
     public bool ArmaAutomatica;
     public float CadenciaDeTiro;
@@ -45,16 +45,25 @@ public class PlayerShoot : MonoBehaviour
         audios = GetComponent<AudioSource>();
         LuzTiro = GetComponent<Light>();
 
-        MunicaoAtual = MaxMunicao;
-        MunicaoNoPenteAtual = MaxMunicaoNoPente;
-        MaxMunicao2 = MaxMunicao;
-        MunicaoAtual2 = MunicaoAtual;
         FoiRecarregado = false;
     }
 
     void Start()
     {
-
+        //if(PlayerPrefs.HasKey("MunicaoAtual"))
+        //{
+            Debug.Log("Ganhamo");
+            LoadPrefs();
+        // }
+        // else{
+        //     Debug.Log("Perdemo");
+        //     int b = gameObject.GetComponent<PlayerShoot>().MaxMunicao;
+        //     int c = gameObject.GetComponent<PlayerShoot>().MaxMunicaoNoPente;
+        //     MunicaoAtual = b;
+        //     MunicaoNoPenteAtual = c;
+        //     SavePrefs();
+        // }
+            
     }
     void Update()
     {
@@ -81,7 +90,14 @@ public class PlayerShoot : MonoBehaviour
              audios.clip = SomSemBala;
              audios.volume = 0.5f;
              audios.Play();
-        }     
+        }   
+
+        if(ControlaEventos.SalvaMunicao)
+        {  
+            SavePrefs();
+            ControlaEventos.SalvaMunicao =  false;
+            Debug.Log("SalveiMunicao");
+        }
     }
     
     void RecarregaArma()
@@ -189,18 +205,31 @@ public class PlayerShoot : MonoBehaviour
             DesativarEfeitos();
     }
 
-    public void SavePrefs(int id)
+    public void SavePrefs()
     {
-        PlayerPrefs.SetInt("MunicaoAtual", MunicaoAtual);
-        PlayerPrefs.SetInt("MunicaoPente", MunicaoNoPenteAtual);
+        for(int x = 0; x < 2; x++)
+        {
+            int balas = gameObject.GetComponent<PlayerShoot>().MunicaoAtual;
+            int balasPente = gameObject.GetComponent<PlayerShoot>().MunicaoNoPenteAtual;
+            //int balasTotais = gameObject.GetComponent<PlayerShoot>().MaxMunicao;
+            //int balasTotaisPente = gameObject.GetComponent<PlayerShoot>().MaxMunicaoNoPente;
+            PlayerPrefs.SetInt("MunicaoAtual" + x, balas);
+            PlayerPrefs.SetInt("MunicaoPente" + x, balasPente);
+            //PlayerPrefs.SetInt("MaxMun", balasTotais);
+            //PlayerPrefs.SetInt("MaxMunPente", balasTotaisPente);
+        }
         PlayerPrefs.Save();
     }
 
-    public void LoadPrefs(int id)
+    public void LoadPrefs()
     {
-        int mx = PlayerPrefs.GetInt("MunicaoAtual");
-        int mp = PlayerPrefs.GetInt("MunicaoPente");
-        MunicaoAtual = mx;
-        MunicaoNoPenteAtual = mp;
+
+        for(int x = 0; x < 2; x++)
+        {
+            MunicaoAtual = PlayerPrefs.GetInt("MunicaoAtual" + x);
+            MunicaoNoPenteAtual = PlayerPrefs.GetInt("MunicaoPente" + x);
+           // MaxMunicao = PlayerPrefs.GetInt("MaxMun");
+            //MaxMunicaoNoPente = PlayerPrefs.GetInt("MaxMunPente");
+        }
     }
 }

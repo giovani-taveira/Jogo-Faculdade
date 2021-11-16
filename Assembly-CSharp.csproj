@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\Dialogos\Talker.cs" />
      <Compile Include="Assets\Scripts\Dialogos\UIManager.cs" />
      <Compile Include="Assets\Scripts\DropItens.cs" />
+     <Compile Include="Assets\Scripts\GerenciadorCenas.cs" />
      <Compile Include="Assets\Scripts\Inimigo\AtaqueInimigo.cs" />
      <Compile Include="Assets\Scripts\Inimigo\ControladorInimigo.cs" />
      <Compile Include="Assets\Scripts\Inimigo\GeraInimigos.cs" />
@@ -298,11 +299,11 @@
     <Reference Include="GLTFSerialization">
         <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Ionic.Zip.Unity">
         <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SketchfabPlugin">
         <HintPath>C:/JogoFaculdade2/Assets/Outros/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>

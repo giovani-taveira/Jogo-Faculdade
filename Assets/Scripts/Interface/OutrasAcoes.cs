@@ -10,30 +10,17 @@ public class OutrasAcoes : MonoBehaviour
     public GameObject InterfaceConfig;
     public GameObject InterfaceGameplay;
     private bool ClicouRetomar = false;
-    private bool EstaNaConfig;
-    private bool ClicouVoltarConfig = false;
-    private bool ClicouConfig = false;
+    private bool EstaNaConfig = false;
+
 
     void Update()
     {
         PausaJogo();
 
-        if(ClicouConfig)
-            EstaNaConfig = true;
-
-
-        if(ClicouVoltarConfig)
-        {
-            EstaNaConfig = false;
-            InterfaceConfig.SetActive(false);
-            InterfacePause.SetActive(true);
-        }
-
-
         if(EstaNaConfig && Input.GetKeyDown(KeyCode.Escape))
         {
-            ClicouVoltarConfig = true;
-            
+            InterfaceConfig.SetActive(false);
+            InterfacePause.SetActive(true);
         }
     }
 
@@ -73,8 +60,8 @@ public class OutrasAcoes : MonoBehaviour
     {
         InterfacePause.SetActive(false);
         InterfaceConfig.SetActive(true);
-        ClicouConfig =  true;
         EstaNaConfig = true;
+
 
     }
 
@@ -91,12 +78,10 @@ public class OutrasAcoes : MonoBehaviour
     {
         InterfaceConfig.SetActive(false);
         InterfacePause.SetActive(true);
-        EstaNaConfig = false;
-        ClicouVoltarConfig = true;
     }
 
     public void Sair()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

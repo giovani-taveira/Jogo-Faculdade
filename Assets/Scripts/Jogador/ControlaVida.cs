@@ -43,7 +43,7 @@ public class ControlaVida : MonoBehaviour
 
     void Update()
     {
-        Txt_Kit.text = ContadorKit.ToString();
+        Txt_Kit.text = $"x{ContadorKit.ToString()}";
         Txt_Vida.text = $"{Vida} / {VidaInicial}";
         barraVida.fillAmount = (1/(float)VidaInicial) * Vida;
 

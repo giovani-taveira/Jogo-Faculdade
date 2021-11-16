@@ -15,6 +15,7 @@ public class ControlaEventos : MonoBehaviour
     public static bool SalvaVida;
     public static bool SalvaMunicao;
     public static bool SalvaPosicao;
+    public static bool SalvaMateriais;
     public static bool AtivaDialogos = false;
 
 
@@ -80,6 +81,7 @@ public class ControlaEventos : MonoBehaviour
             SalvaVida = true;
             SalvaMunicao = true;
             SalvaPosicao = true;
+            SalvaMateriais = true;
         }
     }
     void OnTriggerExit()

@@ -7,13 +7,15 @@ public class BotoesMenuPrincipal : MonoBehaviour
 {
     public GameObject InterfaceMenuPrincipal;
     public GameObject InterfaceConfig;
+    public static bool salvarConfigs = false;
 
     public void Iniciar()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
         OutrasAcoes.EstaPausado = false;
         string cena = PlayerPrefs.GetString("Cena");
+        string res = PlayerPrefs.GetString("Res");
         SceneManager.LoadScene(cena);
     }
 
@@ -27,6 +29,7 @@ public class BotoesMenuPrincipal : MonoBehaviour
     {
         InterfaceConfig.SetActive(false);
         InterfaceMenuPrincipal.SetActive(true);
+        salvarConfigs = true;
     }
 
     public void Sair()

@@ -25,12 +25,12 @@ public class Arma : MonoBehaviour
     void Update()
     {
         TrocaArma();
-        if(ControlaEventos.SalvaMunicao)
-        {
-            ps.SavePrefs(1);
-            ps.SavePrefs(2);
-            ControlaEventos.SalvaMunicao = false;
-        }    
+        // if(ControlaEventos.SalvaMunicao)
+        // {
+        //     // ps.SavePrefs(1);
+        //     // ps.SavePrefs(2);
+        //     ControlaEventos.SalvaMunicao = false;
+        // }    
     }
 
     void TrocaArma()
@@ -51,16 +51,16 @@ public class Arma : MonoBehaviour
             KitMedico.SetActive(false);
             animacao.SetInteger("Transition", 2);
             KitEquipado = false;
-            if(!PlayerPrefs.HasKey("MunicaoAtual"))
-            {
-                ps.MunicaoAtual = ps.MaxMunicao;
-                ps.MunicaoNoPenteAtual = ps.MaxMunicaoNoPente; 
-                ps.SavePrefs(1);
-            }
-            else
-            {
-                ps.LoadPrefs(1);
-            }
+            // if(!PlayerPrefs.HasKey("MunicaoAtual"))
+            // {
+            //     ps.MunicaoAtual = ps.MaxMunicao;
+            //     ps.MunicaoNoPenteAtual = ps.MaxMunicaoNoPente; 
+            //     ps.SavePrefs(1);
+            // }
+            // else
+            // {
+            //     ps.LoadPrefs(1);
+            // }
             
         }
         if(Input.GetKey(KeyCode.Alpha3))
@@ -70,16 +70,16 @@ public class Arma : MonoBehaviour
             KitMedico.SetActive(false);
             animacao.SetInteger("Transition", 1);
             KitEquipado = false;
-            if(!PlayerPrefs.HasKey("MunicaoAtual"))
-            {
-                ps.MunicaoAtual = ps.MaxMunicao;
-                ps.MunicaoNoPenteAtual = ps.MaxMunicaoNoPente; 
-                ps.SavePrefs(2);
-            }
-            else
-            {
-                ps.LoadPrefs(2);
-            }
+            // if(!PlayerPrefs.HasKey("MunicaoAtual"))
+            // {
+            //     ps.MunicaoAtual = ps.MaxMunicao;
+            //     ps.MunicaoNoPenteAtual = ps.MaxMunicaoNoPente; 
+            //     ps.SavePrefs(2);
+            // }
+            // else
+            // {
+            //     ps.LoadPrefs(2);
+            // }
         }
         if(Input.GetKeyDown(KeyCode.Alpha4))
         {
