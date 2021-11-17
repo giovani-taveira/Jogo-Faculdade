@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -13,12 +14,38 @@ public class DialogManager : MonoBehaviour
     private bool EndCurrentTalk = true;
     private bool ButtonClicked = false;
 
-    public static bool TerminouDialogo = false;
+    public static bool TerminouDialogo = true;
+    int d = 0;
+    string CenaAtual; 
     void Awake()
     {
         Instance = this;
+        CenaAtual = SceneManager.GetActiveScene().name;
+
     }
 
+    void Update()
+    {
+        if(d == 9 && TerminouDialogo == true  && CenaAtual == "CasaJeffrey1")
+        {
+            SceneManager.LoadScene("CasaJeffrey2");
+            TerminouDialogo = false;
+        }
+
+        if(d == 15 && TerminouDialogo == true  && CenaAtual == "Casa-Frank")
+        {
+            SceneManager.LoadScene("Fase2-Floresta");
+
+            TerminouDialogo = false;
+        }
+        if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
+        {
+            SceneManager.LoadScene("Cena-Milton");
+            Debug.Log("Acabou o Dialogo");
+            TerminouDialogo = false;
+        }
+
+    }
     public void StartConversation(DialogContainer container)
     {
         CurrentDialog = container;
@@ -36,6 +63,8 @@ public class DialogManager : MonoBehaviour
 
             //espera o EndCurrentTalk se tornar verdadeiro para poder trocar de personagem
             yield return new WaitUntil(() => EndCurrentTalk);
+
+
         }
         UIState?.Invoke(false);
 
@@ -45,14 +74,20 @@ public class DialogManager : MonoBehaviour
     {
         EndCurrentTalk = false;
 
+
         foreach(var message in messages)
         {
             ShowAllMessage(message);
             yield return new WaitUntil(() => ButtonClicked);
+            d++;
+
         }
 
+
         EndCurrentTalk = true;
-        TerminouDialogo = true;
+        
+        //TerminouDialogo = true;
+
     }
 
     //gerencia a exibição dos dialogos

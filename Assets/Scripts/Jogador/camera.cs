@@ -23,7 +23,7 @@ public class camera : MonoBehaviour
         offset.x = 16;
         offset.z = -2;
         velocidade = 2;
-        //InterfaceGameplay.SetActive(false);
+        InterfaceGameplay.SetActive(true);
 
     }
     void FixedUpdate()

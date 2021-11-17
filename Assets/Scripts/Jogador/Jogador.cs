@@ -24,6 +24,8 @@ public class Jogador : MonoBehaviour
     public Text Txt_Materiais;
 
     Vector3 arma;
+
+    public GameObject InterfaceBoss;
     #endregion
 
 
@@ -31,11 +33,28 @@ public class Jogador : MonoBehaviour
     {      
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
-        LoadPrefs();
+        if(PlayerPrefs.HasKey("Cena"))
+        {
+            LoadPrefs();
+        }
+        else{
+            
+            SavePrefs();
+        }
+
+        InterfaceBoss.SetActive(false);
+
     }
 
     void FixedUpdate()
     {
+        if(ControlaEventos.SpawnaBoss)
+        {
+            InterfaceBoss.SetActive(true);
+            ControlaEventos.SpawnaBoss = false;
+        }
+
+
         MovimentaJogador();
         //RotacionaJogador();
         Rotaciona();
@@ -160,6 +179,8 @@ public class Jogador : MonoBehaviour
     {
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
-        PlayerPrefs.GetString("Cena");
+        string Cena = PlayerPrefs.GetString("Cena");
+        //SceneManager.LoadScene(Cena);
+        //DontDestroyOnLoad();
     }
 }

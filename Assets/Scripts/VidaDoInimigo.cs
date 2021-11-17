@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.UI;
 public class VidaDoInimigo : MonoBehaviour
 {
     public int VidaMaxInimigo = 100;
@@ -20,6 +20,13 @@ public class VidaDoInimigo : MonoBehaviour
     public GameObject[] ItemDrop;
 
     public int ChanceDropItem = 0;
+    public Image BarraVidaBoss;
+    public Text Txt_NomeBoss;
+    public string NomeBoss;
+    public static bool Dialogo = false;
+    string CenaAtual;
+
+    
 
     void Awake()
     {
@@ -30,9 +37,24 @@ public class VidaDoInimigo : MonoBehaviour
         VidaAtualInimigo = VidaMaxInimigo;
     }
 
+    void Start()
+    {
+        BarraVidaBoss.fillAmount = 1;
+        Txt_NomeBoss.text = NomeBoss;
+        CenaAtual =PlayerPrefs.GetString("Cena");
+
+    }
+
 
     void Update()
     {
+        BarraVidaBoss.fillAmount = (1/(float)VidaMaxInimigo) * VidaAtualInimigo;
+        if(BarraVidaBoss.fillAmount <= 0 && CenaAtual == "Fase2-Floresta")
+        {
+            Dialogo = true;
+        }
+
+
         if(EstaAfundando)
         {
             transform.Translate(-Vector3.up * TempoDestroiCorpo * Time.deltaTime);

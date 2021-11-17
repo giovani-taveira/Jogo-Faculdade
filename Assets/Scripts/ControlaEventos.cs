@@ -17,6 +17,10 @@ public class ControlaEventos : MonoBehaviour
     public static bool SalvaPosicao;
     public static bool SalvaMateriais;
     public static bool AtivaDialogos = false;
+    public static bool SpawnaBoss = false;
+    public GameObject CanvasDialogo;
+    public DialogContainer dialogContainer;
+
 
 
     void Start()
@@ -30,7 +34,12 @@ public class ControlaEventos : MonoBehaviour
 
     void Update()
     {
-
+        if(VidaDoInimigo.Dialogo)
+        {
+            CanvasDialogo.SetActive(true);
+            VidaDoInimigo.Dialogo = false;
+            DialogManager.Instance.StartConversation(dialogContainer);
+        }
     }
 
     void OnTriggerEnter(Collider colider)
@@ -58,6 +67,7 @@ public class ControlaEventos : MonoBehaviour
         {
             //animacao.SetBool("CaiArvore", true);
             Spawn3.SetActive(true);
+            SpawnaBoss = true;
             //Debug.Log("Colidiu3");
         }
 

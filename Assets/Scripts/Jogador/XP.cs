@@ -37,6 +37,11 @@ public class XP : MonoBehaviour
             BarraXP.fillAmount =  0 + (1/xpNecessario) * XPAtual;
 
         BarraXP.fillAmount = (1/xpNecessario) * XPAtual;
+
+        if(XPAtual > xpNecessario)
+        {
+            XPAtual = xpNecessario;
+        }
         
         //AdicionaXP();
         AtualizaXP();   

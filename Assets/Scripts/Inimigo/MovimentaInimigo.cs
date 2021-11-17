@@ -11,7 +11,7 @@ public class MovimentaInimigo : MonoBehaviour
     ControlaVida vidaPlayer;
     void Start()
     {
-        
+    
     }
 
     void Awake()
@@ -26,7 +26,7 @@ public class MovimentaInimigo : MonoBehaviour
 
     void Update()
     {
-        if(vidaInimigo.VidaAtualInimigo > 0 )
+        if(vidaInimigo.VidaAtualInimigo > 0)
         {
             nav.SetDestination(player.position);
         }
