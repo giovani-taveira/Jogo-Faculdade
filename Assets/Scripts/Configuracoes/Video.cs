@@ -30,13 +30,13 @@ public class Video : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("Res"))
         {
-            LoadPrefs();
+           // LoadPrefs();
             Debug.Log("Pegaeijhidjiwejdowe");
             ddpQuality.value = PlayerPrefs.GetInt("Graficos");
         }
         else
         {
-            SavePrefs();
+            //SavePrefs();
         }
 
 
@@ -71,7 +71,7 @@ public class Video : MonoBehaviour
     {
         if(BotoesMenuPrincipal.salvarConfigs)
         {
-            SavePrefs();
+            //SavePrefs();
             Debug.Log("Salvei A Config");
             BotoesMenuPrincipal.salvarConfigs = false;
         }

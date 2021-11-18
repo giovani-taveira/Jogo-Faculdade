@@ -12,13 +12,30 @@ public class BotoesMenuPrincipal : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        
     }
     public void Iniciar()
     {
 
         Time.timeScale = 1;
         OutrasAcoes.EstaPausado = false;
+
+        if(PlayerPrefs.HasKey("Cena"))
+        {
+            string cena = PlayerPrefs.GetString("Cena");
+            SceneLoader.Instance.LoadSceneAsync(cena);
+            //SceneManager.LoadScene(cena);
+        }
+        else
+        {    
+            SceneLoader.Instance.LoadSceneAsync("Casa-Frank");
+            //SceneManager.LoadScene("Casa-Frank");
+        }
+    }
+
+    public void NovoJogo()
+    {
+        PlayerPrefs.DeleteAll();
 
         if(PlayerPrefs.HasKey("Cena"))
         {

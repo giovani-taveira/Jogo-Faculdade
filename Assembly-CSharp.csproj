@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Dialogos\DialogTrigger.cs" />
      <Compile Include="Assets\Scripts\Dialogos\Talker.cs" />
      <Compile Include="Assets\Scripts\Dialogos\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Dobai.cs" />
      <Compile Include="Assets\Scripts\Inimigo\AtaqueInimigo.cs" />
      <Compile Include="Assets\Scripts\Inimigo\ControladorInimigo.cs" />
      <Compile Include="Assets\Scripts\Inimigo\GeraInimigos.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\Jogador\XP.cs" />
      <Compile Include="Assets\Scripts\Jogador\camera.cs" />
      <Compile Include="Assets\Scripts\Materiais.cs" />
+     <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\TeseTeste.cs" />
      <Compile Include="Assets\Scripts\VidaDoInimigo.cs" />
      <Compile Include="Assets\Scripts\VidaInimigo.cs" />

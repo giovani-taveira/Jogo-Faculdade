@@ -55,5 +55,12 @@ public class camera : MonoBehaviour
             ComZoom = true;
             ControlaEventos.Zoom = false;
         } 
+
+        if(DialogManager.MenosZoom)
+        {
+            offset.y = 55;
+            offset.x = 30;
+            offset.z = -20;
+        }  
     }
 }

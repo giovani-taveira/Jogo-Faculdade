@@ -41,9 +41,6 @@ public class Jogador : MonoBehaviour
             
             SavePrefs();
         }
-
-        InterfaceBoss.SetActive(false);
-
     }
 
     void FixedUpdate()
@@ -54,9 +51,7 @@ public class Jogador : MonoBehaviour
             ControlaEventos.SpawnaBoss = false;
         }
 
-
         MovimentaJogador();
-        //RotacionaJogador();
         Rotaciona();
         Txt_Stamina.text = $"{Stamina.ToString("0")} / {MaxStamina}";
         barraStamina.fillAmount = (1/MaxStamina) * Stamina;
@@ -99,8 +94,7 @@ public class Jogador : MonoBehaviour
                     Velocidade = 15;
                     estaParado = false;
                     estaAndando = false;
-                    Stamina -= 0.8f;
-                    
+                    Stamina -= 0.8f;            
                 }
             }
             else
@@ -180,7 +174,5 @@ public class Jogador : MonoBehaviour
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
         string Cena = PlayerPrefs.GetString("Cena");
-        //SceneManager.LoadScene(Cena);
-        //DontDestroyOnLoad();
     }
 }
