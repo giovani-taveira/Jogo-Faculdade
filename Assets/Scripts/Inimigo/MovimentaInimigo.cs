@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MovimentaInimigo : MonoBehaviour
 {
-    Transform player;
+    public Transform player;
     NavMeshAgent nav;
     VidaDoInimigo vidaInimigo;
     ControlaVida vidaPlayer;

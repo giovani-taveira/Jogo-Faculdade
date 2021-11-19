@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControlaVida : MonoBehaviour
 {
     #region "Variaveis"
-    public int VidaInicial = 400;
+    public static int VidaInicial = 400;
     public static int Vida;
     public Image barraVida;
     public GameObject InterfaceMorte;

@@ -13,7 +13,6 @@ public class AtaqueInimigo : MonoBehaviour
     float timer;
     VidaDoInimigo vidaDoInimigo;
 
-
     void Awake()
     {
         Jogador = GameObject.FindWithTag("Jogador");
@@ -46,7 +45,7 @@ public class AtaqueInimigo : MonoBehaviour
         }   
         if(ControlaVida.Vida <= 0)
         {
-            //Aqui coloca a animaçãio de morte
+            //anim.SetInteger("State" , 1);
         }
     }
 

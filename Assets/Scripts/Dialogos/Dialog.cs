@@ -8,5 +8,4 @@ public class Dialog
     public Talker Talker;
     [UnityEngine.TextArea]
     public string[] Dialogo;
-
 }

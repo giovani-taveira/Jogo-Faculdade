@@ -10,13 +10,14 @@ public class Jogador : MonoBehaviour
     abaixo que so considera o chão*/
     public LayerMask MascaraChao;
     public Image barraStamina;
-    public float MaxStamina;
+    public static float MaxStamina;
     private float Stamina;
     bool estaParado = true, estaAndando = false;
     public Animator animacao;
     public Text Txt_Stamina;
     RaycastHit hit;
     Rigidbody rb;
+    public Rigidbody Arma1Rb;
     Vector3 movimento;
     public float vertical;
     public float horizontal;
@@ -30,15 +31,18 @@ public class Jogador : MonoBehaviour
 
 
     void Start()
-    {      
+    {    
+        MaxStamina = 1000;  
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
+        Arma1Rb = GetComponent<Rigidbody>();
+
         if(PlayerPrefs.HasKey("Cena"))
         {
             LoadPrefs();
         }
-        else{
-            
+        else
+        {  
             SavePrefs();
         }
     }
@@ -132,11 +136,13 @@ public class Jogador : MonoBehaviour
     {
         if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 100)) 
         {
+            
             Vector3 playerToMouse = hit.point - transform.position;
-            playerToMouse.y = 0;
+            playerToMouse.y = 0;          
 
             Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
             rb.MoveRotation (newRotation);
+            Arma1Rb.MoveRotation (newRotation);
 
             Vector3 forwordDirection = new Vector3 (transform.forward.x, 0, transform.forward.z) * Input.GetAxis ("Vertical");
             Vector3 sideDirection = new Vector3 (transform.right.x, 0, transform.right.z) * Input.GetAxis ("Horizontal");

@@ -61,6 +61,12 @@ public class camera : MonoBehaviour
             offset.y = 55;
             offset.x = 30;
             offset.z = -20;
-        }  
+        } 
+        else
+        {
+            offset.y = 30;
+            offset.x = 16;
+            offset.z = -2;
+        } 
     }
 }
