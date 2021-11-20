@@ -7,6 +7,7 @@ public class camera : MonoBehaviour
     public float velocidade;
     [Space(10)]
     public Vector3 offset = Vector3.up;
+    Quaternion quaternion;
     public Transform player;
     [Space(15)]
     public float[] xClamp = new float[2];
@@ -14,6 +15,7 @@ public class camera : MonoBehaviour
     // public bool ApareceInteface = false;
     public GameObject InterfaceGameplay;
     public bool ComZoom;
+    string CenaAtual;
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class camera : MonoBehaviour
         offset.z = -2;
         velocidade = 2;
         InterfaceGameplay.SetActive(true);
+        CenaAtual =  PlayerPrefs.GetString("Cena");
 
     }
     void FixedUpdate()
@@ -68,5 +71,15 @@ public class camera : MonoBehaviour
             offset.x = 16;
             offset.z = -2;
         } 
+
+        
+
+        if(CenaAtual == "CasaJeffrey2")
+        {
+            //offset.y = 24;
+            offset.y = 104;
+            offset.x = -1;
+            offset.z = -110;
+        }
     }
 }

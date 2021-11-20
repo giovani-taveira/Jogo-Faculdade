@@ -16,6 +16,7 @@ public class Arma : MonoBehaviour
     string Cena;
    
     #endregion
+    
     void Start()
     {
         ArmaCurta.SetActive(false);
@@ -27,7 +28,7 @@ public class Arma : MonoBehaviour
 
     void Update()
     {
-        TrocaArma();  
+        TrocaArma();
     }
 
     void TrocaArma()

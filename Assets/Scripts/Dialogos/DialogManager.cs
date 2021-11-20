@@ -32,7 +32,6 @@ public class DialogManager : MonoBehaviour
             ResetaPosicao();
             SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
 
-            
             TerminouDialogo = false;
         }
 

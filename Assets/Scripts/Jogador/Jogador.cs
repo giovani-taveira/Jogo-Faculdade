@@ -31,8 +31,7 @@ public class Jogador : MonoBehaviour
 
 
     void Start()
-    {    
-        MaxStamina = 1000;  
+    {      
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
         Arma1Rb = GetComponent<Rigidbody>();
@@ -43,6 +42,7 @@ public class Jogador : MonoBehaviour
         }
         else
         {  
+            MaxStamina = 1000;  
             SavePrefs();
         }
     }
@@ -171,6 +171,7 @@ public class Jogador : MonoBehaviour
         PlayerPrefs.SetFloat("PosX", transform.position.x);
         PlayerPrefs.SetFloat("PosY", transform.position.y);
         PlayerPrefs.SetFloat("PosZ", transform.position.z);
+        PlayerPrefs.SetFloat("Stamina", MaxStamina);
         PlayerPrefs.SetString("Cena", cena);
         PlayerPrefs.Save();
     }
@@ -180,5 +181,7 @@ public class Jogador : MonoBehaviour
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
         string Cena = PlayerPrefs.GetString("Cena");
+        float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
+        MaxStamina = StaminaSalva;
     }
 }

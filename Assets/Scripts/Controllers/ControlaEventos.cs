@@ -10,7 +10,7 @@ public class ControlaEventos : MonoBehaviour
     public static bool Zoom, SalvaXP, SalvaVida, SalvaMunicao, SalvaPosicao, SalvaMateriais;
     public Animator animacao;
     public Text Txt_PegarItem;
-    public static bool AtivaDialogos = false, SpawnaBoss = false;
+    public static bool AtivaDialogos = false, DialogoAutomatico = false,  SpawnaBoss = false;
     public DialogContainer dialogContainer;
     public static bool DesativaText = false;
     #endregion
@@ -41,9 +41,7 @@ public class ControlaEventos : MonoBehaviour
     void OnTriggerEnter(Collider colider)
     {
         if(colider.gameObject.tag == "ZoomCamera")
-        {
             Zoom = true;
-        }
 
         if(colider.gameObject.tag == "Trigger")
         {
@@ -79,10 +77,15 @@ public class ControlaEventos : MonoBehaviour
             Txt_PegarItem.text = "Aperte (e) para interagir";
             AtivaDialogos = true;
 
-            if(Input.GetKeyDown("e"))
-            {
+            if(Input.GetKeyDown("e"))        
                 Txt_PegarItem.enabled = false;      
-            }
+        }
+
+        if(colider.gameObject.tag == "TriggerCJ2-1")
+        { 
+            DialogoAutomatico = true;
+            AtivaDialogos = true;
+
         }
 
         if(colider.gameObject.tag == "CheckPoint")
@@ -93,14 +96,19 @@ public class ControlaEventos : MonoBehaviour
             SalvaPosicao = true;
             SalvaMateriais = true;
         }
+    }
 
-        if(colider.gameObject.tag == "MesaUpgrade")
+    void OnTriggerStay(Collider collider)
+    {
+        if(collider.gameObject.tag == "MesaUpgrade")
         {
-            Txt_PegarItem.text = "Aperte (e) para fazer upgrade";
+            Txt_PegarItem.text = "Aperte (e) para acessar a mesa";
 
             if(Input.GetKeyDown("e"))
-                InterfaceUpgrade.SetActive(true);
-            
+            {
+                InterfaceUpgrade.SetActive(true);    
+                Time.timeScale = 0;
+            }
         }
     }
     void OnTriggerExit()

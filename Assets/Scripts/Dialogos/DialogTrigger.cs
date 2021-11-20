@@ -15,5 +15,12 @@ public class DialogTrigger : MonoBehaviour
             DialogManager.Instance.StartConversation(dialogContainer);
             ControlaEventos.AtivaDialogos = false;
         }
+
+        if (ControlaEventos.DialogoAutomatico && ControlaEventos.AtivaDialogos)
+        {
+            InterfaceDialogos.SetActive(true);
+            DialogManager.Instance.StartConversation(dialogContainer);
+            ControlaEventos.AtivaDialogos = false;
+        } 
     }
 }
