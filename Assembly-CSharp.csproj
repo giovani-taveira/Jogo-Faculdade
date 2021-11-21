@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\Jogador\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\Jogador\XP.cs" />
      <Compile Include="Assets\Scripts\Jogador\camera.cs" />
+     <Compile Include="Assets\Scripts\TutorialUI.cs" />
      <Compile Include="Assets\Scripts\Upgrade.cs" />
      <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

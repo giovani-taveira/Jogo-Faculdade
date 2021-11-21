@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class camera : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class camera : MonoBehaviour
         offset.z = -2;
         velocidade = 2;
         InterfaceGameplay.SetActive(true);
-        CenaAtual =  PlayerPrefs.GetString("Cena");
+        CenaAtual = SceneManager.GetActiveScene().name;
 
     }
     void FixedUpdate()
@@ -70,16 +71,33 @@ public class camera : MonoBehaviour
             offset.y = 30;
             offset.x = 16;
             offset.z = -2;
-        } 
+        }    
 
-        
-
-        if(CenaAtual == "CasaJeffrey2")
+        if(DialogManager.MenosZoom2)
         {
-            //offset.y = 24;
-            offset.y = 104;
-            offset.x = -1;
-            offset.z = -110;
+            offset.y = 50;
+            offset.x = 50;
+            offset.z = -100;
+        }
+        else
+        {
+            offset.y = 30;
+            offset.x = 16;
+            offset.z = -2;
+        }
+
+        if(CenaAtual == "CasaJeffrey3")
+        {
+            offset.y = 55;
+            offset.x = 5;
+            offset.z = -30;
+        }
+
+        if(DialogManager.MenosZoom3)
+        {
+            offset.y = 55;
+            offset.x = -45;
+            offset.z = -40;
         }
     }
 }

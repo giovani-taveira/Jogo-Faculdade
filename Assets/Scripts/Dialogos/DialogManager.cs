@@ -14,11 +14,15 @@ public class DialogManager : MonoBehaviour
     private DialogContainer CurrentDialog;
     private bool EndCurrentTalk = true, ButtonClicked = false, AtivarBotao;
     public Animator anim, anim2, anim3, anim4;
-    public static bool MenosZoom = false, TerminouDialogo = true;
+    public static bool MenosZoom = false, MenosZoom2 = false, MenosZoom3 = false, TerminouDialogo = true;
+    public static bool AtivaTutorial = false;
+    
     public Image BotaoNext;
     int d = 0;
     string CenaAtual; 
     SceneLoader sceneLoader = new SceneLoader();
+
+
     void Awake()
     {
         Instance = this;
@@ -27,57 +31,28 @@ public class DialogManager : MonoBehaviour
 
     void Update()
     {
-        if(d == 9 && TerminouDialogo == true  && CenaAtual == "CasaJeffrey1")
-        {
-            ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
+        if(CenaAtual == "Casa-Frank")
+            DialogoCasaFrank1();
 
-            TerminouDialogo = false;
+        if(CenaAtual == "CasaFrank2")
+            DialogoCasaFrank2();
+        
+        if(CenaAtual == "CasaJeffrey1")
+            DialogoCasaJeffrey1();
+
+        if(CenaAtual == "CasaJeffrey2")
+        {
+            DialogoCasaJeffrey2();
         }
 
-        if(d == 15 && TerminouDialogo == true  && CenaAtual == "Casa-Frank")
-        {
-            ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("Fase2-Floresta");
-            TerminouDialogo = false;
-        }
+        if(CenaAtual == "CasaJeffrey3")
+            DialogoCasaJeffrey3();
+            
 
-        if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
-        {
-            ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
-            TerminouDialogo = false;
-        }
+        if(CenaAtual == "Fase2-Floresta")
+            DialogoFloresta();
 
-        if(d == 2  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
-        {
-            anim.SetInteger("trigger", 1);
-            BotaoNext.enabled = false;
-            StartCoroutine(AtivaBotao(2.5f));
-        }
-
-        if(d == 10  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
-        {
-            MenosZoom = true;
-            anim.SetInteger("trigger", 2);
-            anim2.SetInteger("trigger", 1);
-            anim3.SetInteger("trigger", 1);
-            anim4.SetInteger("trigger", 1);
-            BotaoNext.enabled = false;
-            StartCoroutine(AtivaBotao(7f));
-        }
-
-        if(d == 11  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
-        {
-            anim.SetInteger("trigger", 3);
-            MenosZoom = false;
-        }
-
-        if(d == 26  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
-        {
-            ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("Fase2-Floresta");
-        }
+        
     }
 
     public IEnumerator AtivaBotao(float tempo)
@@ -135,5 +110,111 @@ public class DialogManager : MonoBehaviour
         PlayerPrefs.DeleteKey("PosX");
         PlayerPrefs.DeleteKey("PosY");
         PlayerPrefs.DeleteKey("PosZ");
+        
+    }
+
+    void DialogoCasaFrank2()
+    {
+        if(d == 2  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
+        {
+            anim.SetInteger("trigger", 1);
+            BotaoNext.enabled = false;
+            StartCoroutine(AtivaBotao(2.5f));
+            var cena = PlayerPrefs.GetString("Cena");
+            Debug.Log(cena);
+        }
+
+        if(d == 10  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
+        {
+            MenosZoom = true;
+            anim.SetInteger("trigger", 2);
+            anim2.SetInteger("trigger", 1);
+            anim3.SetInteger("trigger", 1);
+            anim4.SetInteger("trigger", 1);
+            BotaoNext.enabled = false;
+            StartCoroutine(AtivaBotao(7f));
+        }
+
+        if(d == 11  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
+        {
+            anim.SetInteger("trigger", 3);
+            MenosZoom = false;
+        }
+
+        if(d == 26  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
+        {
+            ResetaPosicao();
+            SceneLoader.Instance.LoadSceneAsync("Fase2-Floresta");
+        }
+    }
+
+    void DialogoCasaFrank1()
+    {
+        if(d == 15 && TerminouDialogo == true  && CenaAtual == "Casa-Frank")
+        {
+            ResetaPosicao();
+            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey3");
+            TerminouDialogo = false;
+        }
+    }
+
+    void DialogoCasaJeffrey1()
+    {
+        if(d == 9 && TerminouDialogo == true  && CenaAtual == "CasaJeffrey1")
+        {
+            ResetaPosicao();
+            CenaAtual = "CasaJeffrey2";
+            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
+            //TerminouDialogo = false;
+        }
+    }
+
+    void DialogoCasaJeffrey2()
+    {  
+        if(d == 1  && TerminouDialogo == true )
+        {
+            //Debug.Log("Entrei no IF");
+            MenosZoom2 = true;
+            BotaoNext.enabled = false;
+            anim.SetInteger("trigger", 1);
+            anim2.SetInteger("trigger", 1);
+            anim3.SetInteger("trigger", 1);
+
+            StartCoroutine(AtivaBotao(8f));
+        }
+        if(d == 2  && TerminouDialogo == true  && CenaAtual == "CasaJeffrey2")
+        {
+            ResetaPosicao();
+            SceneLoader.Instance.LoadSceneAsync("CasaFrank2");
+            MenosZoom2 = false;
+        }
+    }
+
+    void DialogoCasaJeffrey3()
+    {
+        if(d == 3 && TerminouDialogo == true)
+        {
+            AtivaTutorial = true;
+            MenosZoom3 = false;
+        } 
+
+        if(d == 1 && TerminouDialogo == true)
+        {
+            MenosZoom3 = true;
+            BotaoNext.enabled = false;
+            anim.SetInteger("trigger", 1);
+
+            StartCoroutine(AtivaBotao(5f));
+        }
+    } 
+
+    void DialogoFloresta()
+    {
+        if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
+        {
+            ResetaPosicao();
+            SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
+            TerminouDialogo = false;
+        }
     }
 }

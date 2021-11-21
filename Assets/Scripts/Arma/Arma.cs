@@ -33,7 +33,7 @@ public class Arma : MonoBehaviour
 
     void TrocaArma()
     {
-        if(Cena == "Fase2-Floresta" || Cena == "Cena-Milton")
+        if(Cena == "Fase2-Floresta" || Cena == "Cena-Milton" || Cena == "CasaJeffrey3")
         {
             if(Input.GetKey(KeyCode.Alpha1))
             {

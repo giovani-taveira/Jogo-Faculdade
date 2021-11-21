@@ -27,24 +27,41 @@ public class Jogador : MonoBehaviour
     Vector3 arma;
 
     public GameObject InterfaceBoss;
+    public GameObject empty;
     #endregion
 
 
     void Start()
-    {      
+    {    
+        // if(SceneManager.GetActiveScene().name == "CasaJeffey2")
+        // {
+        //      transform.position = empty.transform.position;
+        // }
+        //MaxStamina = 1000;
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
         Arma1Rb = GetComponent<Rigidbody>();
 
         if(PlayerPrefs.HasKey("Cena"))
         {
-            LoadPrefs();
+            LoadPrefsCena();
         }
         else
-        {  
-            MaxStamina = 1000;  
-            SavePrefs();
+        {   
+            SavePrefsCena();
         }
+
+        if(PlayerPrefs.HasKey("Stamina"))
+        {
+            LoadPrefsStamina();
+        }
+        else
+        {
+            MaxStamina = 1000; 
+            SavePrefsStamina();
+        }
+
+        Materiais.MateriaisAtuais = 1000;
     }
 
     void FixedUpdate()
@@ -165,13 +182,24 @@ public class Jogador : MonoBehaviour
     }
 
     void SavePrefs()
-    {
-        string cena = SceneManager.GetActiveScene().name;
-        
+    { 
         PlayerPrefs.SetFloat("PosX", transform.position.x);
         PlayerPrefs.SetFloat("PosY", transform.position.y);
         PlayerPrefs.SetFloat("PosZ", transform.position.z);
+        //PlayerPrefs.SetFloat("Stamina", MaxStamina);
+
+        PlayerPrefs.Save();
+    }
+
+    void SavePrefsStamina()
+    {
         PlayerPrefs.SetFloat("Stamina", MaxStamina);
+        PlayerPrefs.Save();
+    }
+
+    void SavePrefsCena()
+    {
+        string cena = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetString("Cena", cena);
         PlayerPrefs.Save();
     }
@@ -180,7 +208,18 @@ public class Jogador : MonoBehaviour
     {
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
+        
+        float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
+        MaxStamina = StaminaSalva;
+    }
+
+    void LoadPrefsCena()
+    {
         string Cena = PlayerPrefs.GetString("Cena");
+    }
+
+    void LoadPrefsStamina()
+    {
         float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
         MaxStamina = StaminaSalva;
     }
