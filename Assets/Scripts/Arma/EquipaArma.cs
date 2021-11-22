@@ -10,7 +10,7 @@ public class EquipaArma : MonoBehaviour
     int CustoUZI = 200, CustoShotgun = 300, CustoLMG = 800;
     public GameObject Btn_DesblockUZI;
     public GameObject Btn_DesblockShotgun, Btn_DesblockLMG;
-    public GameObject InterfaceUpgrade;
+    public GameObject InterfaceUpgrade, InterfaceGameplay;
  
     void Start()
     {
@@ -107,5 +107,7 @@ public class EquipaArma : MonoBehaviour
     {
         InterfaceUpgrade.SetActive(false);
         Time.timeScale = 1;
+        InterfaceGameplay.SetActive(true);
+        PlayerShoot.PodeAtirar = false;
     }
 }

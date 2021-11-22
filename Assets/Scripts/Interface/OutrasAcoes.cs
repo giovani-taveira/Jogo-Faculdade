@@ -9,6 +9,7 @@ public class OutrasAcoes : MonoBehaviour
     public GameObject InterfacePause;
     public GameObject InterfaceConfig;
     public GameObject InterfaceGameplay;
+    public GameObject InterfaceControles;
     private bool ClicouRetomar = false;
     private bool EstaNaConfig = false;
 
@@ -83,5 +84,17 @@ public class OutrasAcoes : MonoBehaviour
     public void Sair()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Controles()
+    {
+        InterfaceConfig.SetActive(false);
+        InterfaceControles.SetActive(true);
+    }
+
+    public void VoltarControles()
+    {
+        InterfaceConfig.SetActive(true);
+        InterfaceControles.SetActive(false);
     }
 }

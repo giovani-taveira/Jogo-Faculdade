@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class ControlaVolume : MonoBehaviour
 {
     float VolumePrincipal, VolumeMusica, VolumeEfeitosSonoros;
-    public Slider SliderMaster, SliderEfeitos, SliderMusicas;
+    public Slider SliderMaster, SliderMusicas;
 
     void Start()
     {
         SliderMaster.value = PlayerPrefs.GetFloat("Master");
-        SliderEfeitos.value = PlayerPrefs.GetFloat("Efeitos");
         SliderMusicas.value = PlayerPrefs.GetFloat("Musicas");
     }
 

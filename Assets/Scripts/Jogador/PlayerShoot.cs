@@ -35,6 +35,7 @@ public class PlayerShoot : MonoBehaviour
     private bool Recarregavel = true;
     private float ProximoTiro;
     public static bool FoiRecarregado;
+    public static bool PodeAtirar = true;
     #endregion
 
     void Awake()
@@ -50,19 +51,19 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
-        //if(PlayerPrefs.HasKey("MunicaoAtual"))
-        //{
-            Debug.Log("Ganhamo");
+        if(PlayerPrefs.HasKey("MunicaoAtual"))
+        {
             LoadPrefs();
-        // }
-        // else{
-        //     Debug.Log("Perdemo");
-        //     int b = gameObject.GetComponent<PlayerShoot>().MaxMunicao;
-        //     int c = gameObject.GetComponent<PlayerShoot>().MaxMunicaoNoPente;
-        //     MunicaoAtual = b;
-        //     MunicaoNoPenteAtual = c;
-        //     SavePrefs();
-        // }
+        }
+        else
+        {
+            Debug.Log("Perdemo");
+            int b = gameObject.GetComponent<PlayerShoot>().MaxMunicao;
+            int c = gameObject.GetComponent<PlayerShoot>().MaxMunicaoNoPente;
+            MunicaoAtual = b;
+            MunicaoNoPenteAtual = c;
+            SavePrefs();
+        }
             
     }
     void Update()
@@ -181,7 +182,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if(ArmaAutomatica == false)
         {
-            if((Input.GetMouseButtonDown(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
+            if((Input.GetMouseButtonDown(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro && PodeAtirar)
             {
                 ProximoTiro = Time.time + CadenciaDeTiro;
                 audios.volume = 1f;
@@ -192,7 +193,7 @@ public class PlayerShoot : MonoBehaviour
         }
         else
         {
-            if((Input.GetMouseButton(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro)
+            if((Input.GetMouseButton(0)) && OutrasAcoes.EstaPausado == false && MunicaoNoPenteAtual > 0 && Time.time > ProximoTiro && PodeAtirar)
             {
                 ProximoTiro = Time.time + CadenciaDeTiro;
                 audios.volume = 1f;
@@ -230,6 +231,8 @@ public class PlayerShoot : MonoBehaviour
             MunicaoNoPenteAtual = PlayerPrefs.GetInt("MunicaoPente" + x);
            // MaxMunicao = PlayerPrefs.GetInt("MaxMun");
             //MaxMunicaoNoPente = PlayerPrefs.GetInt("MaxMunPente");
+
+            //foreach resolve
         }
     }
 }

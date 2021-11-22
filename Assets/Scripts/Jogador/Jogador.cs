@@ -28,6 +28,7 @@ public class Jogador : MonoBehaviour
 
     public GameObject InterfaceBoss;
     public GameObject empty;
+    public static bool PodeMovimentar;
     #endregion
 
 
@@ -72,14 +73,23 @@ public class Jogador : MonoBehaviour
             ControlaEventos.SpawnaBoss = false;
         }
 
-        MovimentaJogador();
-        Rotaciona();
+        if(PodeMovimentar)
+        {
+            MovimentaJogador();
+            Rotaciona();
+            Animacoes();
+        }
+        else
+        {
+            animacao.enabled = false;
+        }
+
         Txt_Stamina.text = $"{Stamina.ToString("0")} / {MaxStamina}";
         barraStamina.fillAmount = (1/MaxStamina) * Stamina;
 
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
-        Animacoes();
+        
 
         if(GameObject.FindWithTag("Arma"))
         {
@@ -151,7 +161,7 @@ public class Jogador : MonoBehaviour
 
     void Rotaciona()
     {
-        if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 100)) 
+        if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 200)) 
         {
             
             Vector3 playerToMouse = hit.point - transform.position;
@@ -177,6 +187,7 @@ public class Jogador : MonoBehaviour
 
     void Animacoes()
     {
+        animacao.enabled = true;
         animacao.SetFloat("Horizontal", horizontal);
         animacao.SetFloat("Vertical", vertical);
     }

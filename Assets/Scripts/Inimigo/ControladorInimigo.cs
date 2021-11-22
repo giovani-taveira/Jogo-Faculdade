@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorInimigo : MonoBehaviour
 {
@@ -14,11 +15,14 @@ public class ControladorInimigo : MonoBehaviour
     public bool a;
     public int SpawnsZerados;
     public bool colidiu;
+    string CenaAtual;
 
     void Start()
     {
         QuantidadeInimigoAtual = 0;
         InvokeRepeating("Spawn", TempoSpawn, TempoSpawn);
+        CenaAtual = SceneManager.GetActiveScene().name;
+
 
     }
 
@@ -35,9 +39,10 @@ public class ControladorInimigo : MonoBehaviour
             InimigosMortos++;
             VidaDoInimigo.DestruiuInimigo = false;
         }
-        if(InimigosMortos == MaxQuantidadoInimigo)
+        if(InimigosMortos == 5 && CenaAtual == "CasaJeffrey3")
         {
-            a = true;
+            //SceneLoader.Instance.LoadSceneAsync("CasaFrank2");
+            SceneManager.LoadScene("CasaFrank2");
         }  
         if(a)
         {

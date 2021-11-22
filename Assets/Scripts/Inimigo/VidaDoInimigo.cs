@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class VidaDoInimigo : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class VidaDoInimigo : MonoBehaviour
     //AudioSource AudioInimigo;
     ParticleSystem ParticulaHit;
     CapsuleCollider capsuleCollider;
-    bool EstaMorto;
+    public bool EstaMorto;
     public static bool DestruiuInimigo;
     bool EstaAfundando;
     public GameObject[] ItemDrop;
@@ -26,6 +27,7 @@ public class VidaDoInimigo : MonoBehaviour
     public static bool Dialogo = false;
     string CenaAtual;
     public bool EUmBoss = false;
+
 
     
 
@@ -42,7 +44,7 @@ public class VidaDoInimigo : MonoBehaviour
     {
         BarraVidaBoss.fillAmount = 1;
         Txt_NomeBoss.text = NomeBoss;
-        CenaAtual = PlayerPrefs.GetString("Cena");
+        CenaAtual = SceneManager.GetActiveScene().name;
 
     }
 
@@ -51,14 +53,16 @@ public class VidaDoInimigo : MonoBehaviour
     {
         if(EUmBoss)
         {
+            //DialogTrigger.DialogoAutomatico = true;
+            Debug.Log("2");
             BarraVidaBoss.fillAmount = (1/(float)VidaMaxInimigo) * VidaAtualInimigo;
             if(BarraVidaBoss.fillAmount <= 0 && CenaAtual == "Fase2-Floresta")
             {
                 Dialogo = true;
+                Debug.Log("1");
             }
+            Debug.Log("3");
         }
-
-
 
         if(EstaAfundando)
         {
@@ -78,8 +82,7 @@ public class VidaDoInimigo : MonoBehaviour
         ParticulaHit.Play();
 
         if(VidaAtualInimigo <= 0)
-        {
-            
+        {   
             Morte();
         }
     }

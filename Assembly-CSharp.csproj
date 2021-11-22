@@ -62,8 +62,10 @@
      <Compile Include="Assets\Scripts\Arma\EquipaArma.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\ControlaVolume.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\Video.cs" />
+     <Compile Include="Assets\Scripts\ControllerMusicas.cs" />
      <Compile Include="Assets\Scripts\Controllers\ControlaEventos.cs" />
      <Compile Include="Assets\Scripts\Controllers\SceneLoader.cs" />
+     <Compile Include="Assets\Scripts\Controllers\UIBarraItens.cs" />
      <Compile Include="Assets\Scripts\Dialogos\Dialog.cs" />
      <Compile Include="Assets\Scripts\Dialogos\DialogContainer.cs" />
      <Compile Include="Assets\Scripts\Dialogos\DialogManager.cs" />
@@ -84,6 +86,7 @@
      <Compile Include="Assets\Scripts\Jogador\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\Jogador\XP.cs" />
      <Compile Include="Assets\Scripts\Jogador\camera.cs" />
+     <Compile Include="Assets\Scripts\TimerCreditos.cs" />
      <Compile Include="Assets\Scripts\TutorialUI.cs" />
      <Compile Include="Assets\Scripts\Upgrade.cs" />
      <None Include="Assets\Outros\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

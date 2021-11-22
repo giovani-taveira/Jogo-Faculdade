@@ -27,7 +27,6 @@ public class Materiais : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         if(ControlaEventos.SalvaMateriais)
@@ -43,7 +42,7 @@ public class Materiais : MonoBehaviour
         {
             PegouMaterial = true;
             MateriaisAtuais += QuantidadeMaterial;
-
+            ControlaEventos.DesativaText = true;
             Destroy(gameObject);
         }
     }

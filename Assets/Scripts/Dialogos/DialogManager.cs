@@ -14,7 +14,7 @@ public class DialogManager : MonoBehaviour
     private DialogContainer CurrentDialog;
     private bool EndCurrentTalk = true, ButtonClicked = false, AtivarBotao;
     public Animator anim, anim2, anim3, anim4;
-    public static bool MenosZoom = false, MenosZoom2 = false, MenosZoom3 = false, TerminouDialogo = true;
+    public static bool MenosZoom = false, MenosZoom2 = false, MenosZoom3 = false, MenosZoom4 = false, MenosZoom5=false, TerminouDialogo = true;
     public static bool AtivaTutorial = false;
     
     public Image BotaoNext;
@@ -27,6 +27,7 @@ public class DialogManager : MonoBehaviour
     {
         Instance = this;
         CenaAtual = SceneManager.GetActiveScene().name;
+        PlayerShoot.PodeAtirar = true;
     }
 
     void Update()
@@ -52,7 +53,17 @@ public class DialogManager : MonoBehaviour
         if(CenaAtual == "Fase2-Floresta")
             DialogoFloresta();
 
-        
+        if(!EndCurrentTalk)
+        {
+            PlayerShoot.PodeAtirar = false;
+            Jogador.PodeMovimentar = false;
+        }
+
+        if(EndCurrentTalk)
+        {
+            PlayerShoot.PodeAtirar = true;
+            Jogador.PodeMovimentar = true;
+        }   
     }
 
     public IEnumerator AtivaBotao(float tempo)
@@ -77,7 +88,7 @@ public class DialogManager : MonoBehaviour
             ResetText?.Invoke();
             NewTalker?.Invoke(CurrentDialog.Dialogos[i]);
             StartCoroutine(ShowDialog(CurrentDialog.Dialogos[i].Dialogo));
-
+        
             //espera o EndCurrentTalk se tornar verdadeiro para poder trocar de personagem
             yield return new WaitUntil(() => EndCurrentTalk);
         }
@@ -92,6 +103,7 @@ public class DialogManager : MonoBehaviour
         {
             ShowAllMessage(message);
             yield return new WaitUntil(() => ButtonClicked);
+            
             d++;
         }
         EndCurrentTalk = true;
@@ -126,7 +138,7 @@ public class DialogManager : MonoBehaviour
 
         if(d == 10  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
         {
-            MenosZoom = true;
+            MenosZoom4 = true;
             anim.SetInteger("trigger", 2);
             anim2.SetInteger("trigger", 1);
             anim3.SetInteger("trigger", 1);
@@ -138,7 +150,7 @@ public class DialogManager : MonoBehaviour
         if(d == 11  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
         {
             anim.SetInteger("trigger", 3);
-            MenosZoom = false;
+            MenosZoom4 = false;
         }
 
         if(d == 26  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
@@ -153,8 +165,9 @@ public class DialogManager : MonoBehaviour
         if(d == 15 && TerminouDialogo == true  && CenaAtual == "Casa-Frank")
         {
             ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey3");
-            TerminouDialogo = false;
+            //SceneLoader.Instance.LoadSceneAsync("CasaJeffrey3");
+            //TerminouDialogo = false;
+            SceneManager.LoadScene("CasaJeffrey3");
         }
     }
 
@@ -164,7 +177,9 @@ public class DialogManager : MonoBehaviour
         {
             ResetaPosicao();
             CenaAtual = "CasaJeffrey2";
-            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
+            //SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
+            SceneManager.LoadScene("CasaJeffrey2");
+            
             //TerminouDialogo = false;
         }
     }
@@ -185,7 +200,8 @@ public class DialogManager : MonoBehaviour
         if(d == 2  && TerminouDialogo == true  && CenaAtual == "CasaJeffrey2")
         {
             ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("CasaFrank2");
+            //SceneLoader.Instance.LoadSceneAsync("Casa-Frank");
+            SceneManager.LoadScene("Casa-Frank");
             MenosZoom2 = false;
         }
     }
@@ -210,10 +226,13 @@ public class DialogManager : MonoBehaviour
 
     void DialogoFloresta()
     {
+        Debug.Log("TEstee");
         if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
         {
+            Debug.Log("TEstee222");
             ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
+            //SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
+            SceneManager.LoadScene("Cena-Milton");
             TerminouDialogo = false;
         }
     }
