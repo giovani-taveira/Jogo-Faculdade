@@ -44,13 +44,6 @@ public class Jogador : MonoBehaviour
 
     void Start()
     {    
-        // if(SceneManager.GetActiveScene().name == "CasaJeffey2")
-        // {
-        //      transform.position = empty.transform.position;
-        // }
-        //MaxStamina = 1000;
-
-
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
         Arma1Rb = GetComponent<Rigidbody>();
@@ -63,17 +56,8 @@ public class Jogador : MonoBehaviour
         else
         {   
             SavePrefsCena();
-            //SavePrefs();
-        }
 
-        //if(PlayerPrefs.HasKey("PosX"))
-        //{
-            //LoadPrefs();
-        //}
-        // else
-        // {
-        //     SavePrefs();
-        // }
+        }
 
         if(PlayerPrefs.HasKey("Stamina"))
         {
@@ -81,7 +65,7 @@ public class Jogador : MonoBehaviour
         }
         else
         {
-            MaxStamina = 1000; 
+            MaxStamina = 200; 
             SavePrefsStamina();
         }
 

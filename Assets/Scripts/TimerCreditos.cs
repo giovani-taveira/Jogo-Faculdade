@@ -20,6 +20,5 @@ public class TimerCreditos : MonoBehaviour
         yield return new WaitForSeconds(tempo);
         SceneManager.LoadScene("MenuPrincipal");
         StopCoroutine(Timer(0f));
-
     }
 }

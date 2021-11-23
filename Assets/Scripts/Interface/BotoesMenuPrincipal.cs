@@ -80,4 +80,9 @@ public class BotoesMenuPrincipal : MonoBehaviour
     {
 
     }
+
+    public void PularCreditos()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 }

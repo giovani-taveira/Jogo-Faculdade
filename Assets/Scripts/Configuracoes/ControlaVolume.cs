@@ -10,21 +10,31 @@ public class ControlaVolume : MonoBehaviour
 
     void Start()
     {
-        SliderMaster.value = PlayerPrefs.GetFloat("Master");
-        SliderMusicas.value = PlayerPrefs.GetFloat("Musicas");
+        if(PlayerPrefs.HasKey("Master") && PlayerPrefs.HasKey("Musica"))
+        {
+            LoadPrefsVolume();
+        }
+        else
+        {
+            SliderMaster.value = 1;
+            SliderMusicas.value = 1;
+            //SavePrefsVolume();
+            PlayerPrefs.SetFloat("Master", VolumePrincipal);  
+            PlayerPrefs.SetFloat("Musica", VolumeMusica);
+        }
     }
 
     void Update()
     {
-        
+        //SavePrefsVolume();
     }
 
     public void VolumeMaster(float volume)
     {
         VolumePrincipal = volume;
-        AudioListener.volume = VolumePrincipal;
-
-        PlayerPrefs.SetFloat("Master", VolumePrincipal);
+        AudioListener.volume = VolumePrincipal; 
+        PlayerPrefs.SetFloat("Master", VolumePrincipal);  
+        PlayerPrefs.Save();
     }
 
     public void VolumeDaMusica(float volume)
@@ -34,8 +44,9 @@ public class ControlaVolume : MonoBehaviour
         for(int i = 0; i < Vlm.Length; i++)
         {
             Vlm[i].GetComponent<AudioSource>().volume = VolumeMusica;
-        }
-        PlayerPrefs.SetFloat("Musicas", VolumeMusica);
+        } 
+            PlayerPrefs.SetFloat("Musica", VolumeMusica);
+            PlayerPrefs.Save();     
     }
 
     public void VolumeDosEfeitos(float volume)
@@ -45,7 +56,17 @@ public class ControlaVolume : MonoBehaviour
         for(int i = 0; i < Vles.Length; i++)
         {
             Vles[i].GetComponent<AudioSource>().volume = VolumeEfeitosSonoros;
-        }
-        PlayerPrefs.SetFloat("Efeitos", VolumeEfeitosSonoros);
+        }     
+    }
+
+    void SavePrefsVolume()
+    {
+        PlayerPrefs.Save();
+    }
+
+    void LoadPrefsVolume()
+    {
+        SliderMaster.value = PlayerPrefs.GetFloat("Master");
+        SliderMusicas.value = PlayerPrefs.GetFloat("Musica");
     }
 }

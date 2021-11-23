@@ -20,7 +20,7 @@ public class DialogManager : MonoBehaviour
     public Image BotaoNext;
     int d = 0;
     string CenaAtual; 
-    SceneLoader sceneLoader = new SceneLoader();
+
 
 
     void Awake()
@@ -124,8 +124,7 @@ public class DialogManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("PosX");
         PlayerPrefs.DeleteKey("PosY");
-        PlayerPrefs.DeleteKey("PosZ");
-        
+        PlayerPrefs.DeleteKey("PosZ");     
     }
 
     void DialogoCasaFrank2()
@@ -169,8 +168,7 @@ public class DialogManager : MonoBehaviour
         if(d == 15 && TerminouDialogo == true  && CenaAtual == "Casa-Frank")
         {
             ResetaPosicao();
-            //SceneLoader.Instance.LoadSceneAsync("CasaJeffrey3");
-            //TerminouDialogo = false;
+
             SceneManager.LoadScene("CasaJeffrey3");
         }
     }
@@ -180,11 +178,7 @@ public class DialogManager : MonoBehaviour
         if(d == 9 && TerminouDialogo == true  && CenaAtual == "CasaJeffrey1")
         {
             ResetaPosicao();
-            CenaAtual = "CasaJeffrey2";
-            //SceneLoader.Instance.LoadSceneAsync("CasaJeffrey2");
             SceneManager.LoadScene("CasaJeffrey2");
-            
-            //TerminouDialogo = false;
         }
     }
 
@@ -204,7 +198,6 @@ public class DialogManager : MonoBehaviour
         if(d == 2  && TerminouDialogo == true  && CenaAtual == "CasaJeffrey2")
         {
             ResetaPosicao();
-            //SceneLoader.Instance.LoadSceneAsync("Casa-Frank");
             SceneManager.LoadScene("Casa-Frank");
             MenosZoom2 = false;
         }
@@ -232,33 +225,26 @@ public class DialogManager : MonoBehaviour
     {
         if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
         {
-            ResetaPosicao();
-            //SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
             SceneManager.LoadScene("Cena-Milton");
-            PlayerPrefs.GetInt("Stamina");
-            int vi = PlayerPrefs.GetInt("Vida");
-            PlayerPrefs.GetInt("VidaMax");
-            PlayerPrefs.GetInt("QtdKit");
-            TerminouDialogo = false;
         }
     }
 
     void DialogoBossFinal()
     {
-        if(d == 1 && TerminouDialogo == true)
+        if(d == 1 && TerminouDialogo == true && CenaAtual == "Cena-Milton")
         {
             anim.SetInteger("trigger", 1);
             StartCoroutine(AtivaBotao(1f));
             MenosZoom6 = true;
         }
 
-        if(d == 14 && TerminouDialogo == true)
+        if(d == 14 && TerminouDialogo == true && CenaAtual == "Cena-Milton")
         {
             anim.SetInteger("trigger", 2);
             StartCoroutine(AtivaBotao(4f));
         }
 
-        if(d == 15 && TerminouDialogo == true)
+        if(d == 15 && TerminouDialogo == true && CenaAtual == "Cena-Milton")
         {
             SceneManager.LoadScene("Creditos");
         }

@@ -12,6 +12,7 @@ public class OutrasAcoes : MonoBehaviour
     public GameObject InterfaceControles;
     private bool ClicouRetomar = false;
     private bool EstaNaConfig = false;
+    public static bool salvarConfigs = false;
 
 
     void Update()
@@ -79,11 +80,13 @@ public class OutrasAcoes : MonoBehaviour
     {
         InterfaceConfig.SetActive(false);
         InterfacePause.SetActive(true);
+        salvarConfigs = true;
     }
 
     public void Sair()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     public void Controles()
