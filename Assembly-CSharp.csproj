@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\Inimigo\VidaDoInimigo.cs" />
      <Compile Include="Assets\Scripts\Interface\BotoesMenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\Interface\OutrasAcoes.cs" />
+     <Compile Include="Assets\Scripts\Introducao.cs" />
      <Compile Include="Assets\Scripts\Itens\CaixaMunicao.cs" />
      <Compile Include="Assets\Scripts\Itens\KitMedico.cs" />
      <Compile Include="Assets\Scripts\Itens\Materiais.cs" />

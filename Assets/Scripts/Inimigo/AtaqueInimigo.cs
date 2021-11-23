@@ -57,5 +57,8 @@ public class AtaqueInimigo : MonoBehaviour
         {  
             VidaJogador.TomaDano(DanoAtaque);
         }
+        else{
+            VidaJogador.Morte();
+        }
     }
 }

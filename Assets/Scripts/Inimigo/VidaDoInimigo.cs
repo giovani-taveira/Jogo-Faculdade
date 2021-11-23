@@ -51,12 +51,25 @@ public class VidaDoInimigo : MonoBehaviour
 
     void Update()
     {
-        if(EUmBoss)
+        if(EUmBoss && CenaAtual == "Fase2-Floresta")
         {
             //DialogTrigger.DialogoAutomatico = true;
             Debug.Log("2");
             BarraVidaBoss.fillAmount = (1/(float)VidaMaxInimigo) * VidaAtualInimigo;
             if(BarraVidaBoss.fillAmount <= 0 && CenaAtual == "Fase2-Floresta")
+            {
+                Dialogo = true;
+                Debug.Log("1");
+            }
+            Debug.Log("3");
+        }
+
+        if(EUmBoss && CenaAtual == "Cena-Milton")
+        {
+            //DialogTrigger.DialogoAutomatico = true;
+            Debug.Log("2");
+            BarraVidaBoss.fillAmount = (1/(float)VidaMaxInimigo) * VidaAtualInimigo;
+            if(BarraVidaBoss.fillAmount <= 0 && CenaAtual == "Cena-Milton")
             {
                 Dialogo = true;
                 Debug.Log("1");

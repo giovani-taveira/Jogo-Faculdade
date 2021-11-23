@@ -29,8 +29,18 @@ public class Jogador : MonoBehaviour
     public GameObject InterfaceBoss;
     public GameObject empty;
     public static bool PodeMovimentar;
+    public static bool Introducao = false;
+    string CenaAtual;
     #endregion
 
+    void awake()
+    {
+        CenaAtual = SceneManager.GetActiveScene().name;
+        if(CenaAtual == "CasaJeffrey1")
+        {
+            Introducao = true;
+        }
+    }
 
     void Start()
     {    
@@ -39,6 +49,8 @@ public class Jogador : MonoBehaviour
         //      transform.position = empty.transform.position;
         // }
         //MaxStamina = 1000;
+
+
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
         Arma1Rb = GetComponent<Rigidbody>();
@@ -46,11 +58,22 @@ public class Jogador : MonoBehaviour
         if(PlayerPrefs.HasKey("Cena"))
         {
             LoadPrefsCena();
+            
         }
         else
         {   
             SavePrefsCena();
+            //SavePrefs();
         }
+
+        //if(PlayerPrefs.HasKey("PosX"))
+        //{
+            //LoadPrefs();
+        //}
+        // else
+        // {
+        //     SavePrefs();
+        // }
 
         if(PlayerPrefs.HasKey("Stamina"))
         {
@@ -220,8 +243,8 @@ public class Jogador : MonoBehaviour
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
         
-        float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
-        MaxStamina = StaminaSalva;
+        // float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
+        // MaxStamina = StaminaSalva;
     }
 
     void LoadPrefsCena()

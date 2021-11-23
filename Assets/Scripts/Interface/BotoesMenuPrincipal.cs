@@ -9,6 +9,8 @@ public class BotoesMenuPrincipal : MonoBehaviour
     public GameObject InterfaceMenuPrincipal;
     public GameObject InterfaceConfig;
     public static bool salvarConfigs = false;
+    //public GameObject VerificacaoSave;
+    //public GameObject Aviso;
 
     void Start()
     {
@@ -29,12 +31,14 @@ public class BotoesMenuPrincipal : MonoBehaviour
         else
         {    
             SceneLoader.Instance.LoadSceneAsync("CasaJeffrey1");
+            //VerificacaoSave.SetActive(true);
             //SceneManager.LoadScene("Casa-Frank");
         }
     }
 
     public void NovoJogo()
     {
+        //Aviso.SetActive(true);
         PlayerPrefs.DeleteAll();
 
         if(PlayerPrefs.HasKey("Cena"))
@@ -50,13 +54,13 @@ public class BotoesMenuPrincipal : MonoBehaviour
 
     public void Config()
     {
-
         InterfaceMenuPrincipal.SetActive(false);
         InterfaceConfig.SetActive(true);
     }
 
     public void ConfigVoltar()
     {
+        //VerificacaoSave.SetActive(false);
         InterfaceConfig.SetActive(false);
         InterfaceMenuPrincipal.SetActive(true);
         salvarConfigs = true;
@@ -70,5 +74,10 @@ public class BotoesMenuPrincipal : MonoBehaviour
     public void Creditos()
     {
         SceneLoader.Instance.LoadSceneAsync("Creditos");  
+    }
+
+    public void IniciarNewGame()
+    {
+
     }
 }

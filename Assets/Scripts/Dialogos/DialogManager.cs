@@ -14,7 +14,7 @@ public class DialogManager : MonoBehaviour
     private DialogContainer CurrentDialog;
     private bool EndCurrentTalk = true, ButtonClicked = false, AtivarBotao;
     public Animator anim, anim2, anim3, anim4;
-    public static bool MenosZoom = false, MenosZoom2 = false, MenosZoom3 = false, MenosZoom4 = false, MenosZoom5=false, TerminouDialogo = true;
+    public static bool MenosZoom = false, MenosZoom2 = false, MenosZoom3 = false, MenosZoom4 = false, MenosZoom5=false, MenosZoom6 = false, TerminouDialogo = true;
     public static bool AtivaTutorial = false;
     
     public Image BotaoNext;
@@ -52,6 +52,9 @@ public class DialogManager : MonoBehaviour
 
         if(CenaAtual == "Fase2-Floresta")
             DialogoFloresta();
+
+        if(CenaAtual == "Cena-Milton")
+            DialogoBossFinal();
 
         if(!EndCurrentTalk)
         {
@@ -156,7 +159,8 @@ public class DialogManager : MonoBehaviour
         if(d == 26  && TerminouDialogo == true  && CenaAtual == "CasaFrank2")
         {
             ResetaPosicao();
-            SceneLoader.Instance.LoadSceneAsync("Fase2-Floresta");
+            //SceneLoader.Instance.LoadSceneAsync("Fase2-Floresta");
+            SceneManager.LoadScene("Fase2-Floresta");
         }
     }
 
@@ -226,14 +230,37 @@ public class DialogManager : MonoBehaviour
 
     void DialogoFloresta()
     {
-        Debug.Log("TEstee");
         if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
         {
-            Debug.Log("TEstee222");
             ResetaPosicao();
             //SceneLoader.Instance.LoadSceneAsync("Cena-Milton");
             SceneManager.LoadScene("Cena-Milton");
+            PlayerPrefs.GetInt("Stamina");
+            int vi = PlayerPrefs.GetInt("Vida");
+            PlayerPrefs.GetInt("VidaMax");
+            PlayerPrefs.GetInt("QtdKit");
             TerminouDialogo = false;
+        }
+    }
+
+    void DialogoBossFinal()
+    {
+        if(d == 1 && TerminouDialogo == true)
+        {
+            anim.SetInteger("trigger", 1);
+            StartCoroutine(AtivaBotao(1f));
+            MenosZoom6 = true;
+        }
+
+        if(d == 14 && TerminouDialogo == true)
+        {
+            anim.SetInteger("trigger", 2);
+            StartCoroutine(AtivaBotao(4f));
+        }
+
+        if(d == 15 && TerminouDialogo == true)
+        {
+            SceneManager.LoadScene("Creditos");
         }
     }
 }

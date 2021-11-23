@@ -12,7 +12,9 @@ public class ControlaEventos : MonoBehaviour
     public Text Txt_PegarItem;
     public static bool AtivaDialogos = false, DialogoAutomatico = false,  SpawnaBoss = false;
     public DialogContainer dialogContainer;
-    public static bool DesativaText = false, AtivaMusica1, AtivaMusica2, AtivaMusica3, DesativaMusica; 
+    public static bool DesativaText = false, AtivaMusica1, AtivaMusica2, AtivaMusica3, DesativaMusica, ZoomBoss; 
+    
+   
     #endregion
     void Start()
     {     
@@ -63,6 +65,7 @@ public class ControlaEventos : MonoBehaviour
             Spawn3.SetActive(true);
             SpawnaBoss = true;
             AtivaMusica3 = true;
+            ZoomBoss = true;
         }
 
         if(colider.gameObject.tag == "Item")

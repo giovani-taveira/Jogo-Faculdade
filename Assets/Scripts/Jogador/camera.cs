@@ -126,10 +126,26 @@ public class camera : MonoBehaviour
             Debug.Log("ENTREI NO IF666");
         }  
 
-        if(CenaAtual == "Cena-Milton")
+        if(CenaAtual == "Cena-Milton" && !ControlaEventos.ZoomBoss)
+        {
+            offset.y = 33;
+            offset.x = 8;
+            offset.z = -15;
+
+
+        } 
+        if(CenaAtual == "Cena-Milton" && ControlaEventos.ZoomBoss)
         {
             offset.y = 55;
             offset.x = 8;
+            offset.z = -20;
+            //ControlaEventos.ZoomBoss = false;
+        }
+
+        if(DialogManager.MenosZoom6)
+        {
+            offset.y = 65;
+            offset.x = 10;
             offset.z = -20;
         }
     }

@@ -76,9 +76,9 @@ public class ControlaVida : MonoBehaviour
         }
     }
 
-    void Morte()
+    public void Morte()
     {
-        palyerShooting.DesativarEfeitos();
+        //palyerShooting.DesativarEfeitos();
         Vida = 0;
         Time.timeScale = 0;
         InterfaceMorte.SetActive(true); 

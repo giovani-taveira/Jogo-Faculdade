@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class Video : MonoBehaviour
 {
-    public Dropdown ddpResolution;
-    public Dropdown ddpQuality;
+    //public Dropdown ddpResolution;
+    //public Dropdown ddpQuality;
     private List<string> resolucoes = new List<string>();
     private List<string> graficos = new List<string>();
     public Button TelaCheia;
@@ -28,31 +28,31 @@ public class Video : MonoBehaviour
 
     void Start()
     {
-        if(PlayerPrefs.HasKey("Res"))
-        {
-           // LoadPrefs();
-            Debug.Log("Pegaeijhidjiwejdowe");
-            ddpQuality.value = PlayerPrefs.GetInt("Graficos");
-        }
-        else
-        {
-            //SavePrefs();
-        }
+        // if(PlayerPrefs.HasKey("Res"))
+        // {
+        //    // LoadPrefs();
+        //     Debug.Log("Pegaeijhidjiwejdowe");
+        //     ddpQuality.value = PlayerPrefs.GetInt("Graficos");
+        // }
+        // else
+        // {
+        //     //SavePrefs();
+        // }
 
 
-        Resolution[] ArrayResolucoes = Screen.resolutions;
+        // Resolution[] ArrayResolucoes = Screen.resolutions;
 
-        foreach(Resolution r in ArrayResolucoes)
-        {
-            resolucoes.Add(string.Format("{0} X {1}", r.width, r.height));
-            Debug.Log(r);
-        }
+        // foreach(Resolution r in ArrayResolucoes)
+        // {
+        //     resolucoes.Add(string.Format("{0} X {1}", r.width, r.height));
+        //     Debug.Log(r);
+        // }
 
-        ddpResolution.AddOptions(resolucoes);
-        ddpResolution.value = (resolucoes.Count -1);
+        // ddpResolution.AddOptions(resolucoes);
+        // ddpResolution.value = (resolucoes.Count -1);
 
-        graficos = QualitySettings.names.ToList<String>();
-        ddpQuality.AddOptions(graficos);
+        // graficos = QualitySettings.names.ToList<String>();
+        // ddpQuality.AddOptions(graficos);
         //ddpQuality.value = QualitySettings.GetQualityLevel();
 
         if(Tela == 0)
@@ -100,25 +100,25 @@ public class Video : MonoBehaviour
         }
     }
 
-    public void SetaResolucao()
-    {
-        string[] res = resolucoes[ddpResolution.value].Split('X');
-        int w = Convert.ToInt16(res[0].Trim());
-        int h = Convert.ToInt16(res[1].Trim());
-        Screen.SetResolution(w, h, Screen.fullScreen); 
-    }
+    // public void SetaResolucao()
+    // {
+    //     string[] res = resolucoes[ddpResolution.value].Split('X');
+    //     int w = Convert.ToInt16(res[0].Trim());
+    //     int h = Convert.ToInt16(res[1].Trim());
+    //     Screen.SetResolution(w, h, Screen.fullScreen); 
+    // }
 
-    public void SetaGrafico()
-    {
-        QualitySettings.SetQualityLevel(ddpQuality.value, true);
-    }
+    // public void SetaGrafico()
+    // {
+    //     QualitySettings.SetQualityLevel(ddpQuality.value, true);
+    // }
 
     public void SavePrefs()
     {
         PlayerPrefs.SetInt("Tela", 0); 
         PlayerPrefs.SetInt("Tela", 1);
-        PlayerPrefs.SetInt("Resolucao", ddpResolution.value);
-        PlayerPrefs.SetInt("Graficos", ddpQuality.value);
+        //PlayerPrefs.SetInt("Resolucao", ddpResolution.value);
+        //PlayerPrefs.SetInt("Graficos", ddpQuality.value);
         PlayerPrefs.Save();
         
     }
@@ -126,8 +126,8 @@ public class Video : MonoBehaviour
     public void LoadPrefs()
     {
         int tela = (PlayerPrefs.GetInt("Tela"));
-        int resolution = PlayerPrefs.GetInt("Res", 0);
-        int value = PlayerPrefs.GetInt("Graficos", ddpQuality.value);
+        //int resolution = PlayerPrefs.GetInt("Res", 0);
+        //int value = PlayerPrefs.GetInt("Graficos", ddpQuality.value);
 
         //ddpResolution.value = resolution;
 
