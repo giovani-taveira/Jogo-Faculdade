@@ -223,7 +223,7 @@ public class DialogManager : MonoBehaviour
 
     void DialogoFloresta()
     {
-        if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta")
+        if(d == 3  && TerminouDialogo == true  && CenaAtual == "Fase2-Floresta" && ControleProgresso.AvancouParaOBoss)
         {
             SceneManager.LoadScene("Cena-Milton");
         }

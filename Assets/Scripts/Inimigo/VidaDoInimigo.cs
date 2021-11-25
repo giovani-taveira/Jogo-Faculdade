@@ -16,7 +16,7 @@ public class VidaDoInimigo : MonoBehaviour
     ParticleSystem ParticulaHit;
     CapsuleCollider capsuleCollider;
     public bool EstaMorto;
-    public static bool DestruiuInimigo;
+    public static bool DestruiuInimigo, DiminuiMusicaBoss;
     bool EstaAfundando;
     public GameObject[] ItemDrop;
 
@@ -26,7 +26,7 @@ public class VidaDoInimigo : MonoBehaviour
     public string NomeBoss;
     public static bool Dialogo = false;
     string CenaAtual;
-    public bool EUmBoss = false;
+    public bool EUmBoss = false; 
 
 
     
@@ -53,15 +53,13 @@ public class VidaDoInimigo : MonoBehaviour
     {
         if(EUmBoss && CenaAtual == "Fase2-Floresta")
         {
-            //DialogTrigger.DialogoAutomatico = true;
-            Debug.Log("2");
             BarraVidaBoss.fillAmount = (1/(float)VidaMaxInimigo) * VidaAtualInimigo;
+
             if(BarraVidaBoss.fillAmount <= 0 && CenaAtual == "Fase2-Floresta")
             {
                 Dialogo = true;
-                Debug.Log("1");
+                DiminuiMusicaBoss = true;
             }
-            Debug.Log("3");
         }
 
         if(EUmBoss && CenaAtual == "Cena-Milton")

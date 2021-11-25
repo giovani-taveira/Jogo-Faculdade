@@ -17,19 +17,14 @@ public class Jogador : MonoBehaviour
     public Text Txt_Stamina;
     RaycastHit hit;
     Rigidbody rb;
-    public Rigidbody Arma1Rb;
-    Vector3 movimento;
-    public float vertical;
-    public float horizontal;
+    Animator anim;
+    Vector3 movimento, LookPos, move, moveInput;
+
+    float vertical,horizontal, forwardAmount, turnAmount ;
 
     public Text Txt_Materiais;
-
-    Vector3 arma;
-
     public GameObject InterfaceBoss;
-    public GameObject empty;
-    public static bool PodeMovimentar;
-    public static bool Introducao = false;
+    public static bool PodeMovimentar, Introducao = false;
     string CenaAtual;
     #endregion
 
@@ -46,18 +41,7 @@ public class Jogador : MonoBehaviour
     {    
         Stamina = MaxStamina; 
         rb = GetComponent<Rigidbody> ();
-        Arma1Rb = GetComponent<Rigidbody>();
 
-        if(PlayerPrefs.HasKey("Cena"))
-        {
-            LoadPrefsCena();
-            
-        }
-        else
-        {   
-            SavePrefsCena();
-
-        }
 
         if(PlayerPrefs.HasKey("Stamina"))
         {
@@ -69,7 +53,39 @@ public class Jogador : MonoBehaviour
             SavePrefsStamina();
         }
 
+        if(PlayerPrefs.HasKey("PosX"))
+        {
+            LoadPrefsPosicao();
+        }
+
         Materiais.MateriaisAtuais = 1000;
+
+        SetupAnimator();
+    }
+
+    void Update()
+    {
+        if(PodeMovimentar)
+        {
+            Ray  ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit, 100))
+            {
+                LookPos = hit.point;
+            }
+
+            Vector3 lookDir = LookPos - transform.position;
+            lookDir.y = 0;
+
+            transform.LookAt(transform.position + lookDir, Vector3.up);
+
+            ConvertMoveInput();
+            UpdateAnimator();
+        }
+
+        if(Input.GetKey("w") && Input.GetKey("a") || Input.GetKey("w") && Input.GetKey("d"))
+            Velocidade = 1.3f;
     }
 
     void FixedUpdate()
@@ -81,34 +97,40 @@ public class Jogador : MonoBehaviour
         }
 
         if(PodeMovimentar)
-        {
+        {       
             MovimentaJogador();
-            Rotaciona();
-            Animacoes();
-        }
-        else
-        {
-            animacao.enabled = false;
+
+            float vertical = Input.GetAxis("Vertical");
+            float horizontal = Input.GetAxis("Horizontal");
+
+            move = vertical * Vector3.forward + horizontal * Vector3.right; 
+
+            if(move.magnitude > 1)
+            {
+                move.Normalize();
+            }
+
+            Move(move);
+
+            Vector3 movement = new Vector3(horizontal, 0, vertical);
+            rb.AddForce(movement * Velocidade / Time.deltaTime);
         }
 
         Txt_Stamina.text = $"{Stamina.ToString("0")} / {MaxStamina}";
-        barraStamina.fillAmount = (1/MaxStamina) * Stamina;
-
-        vertical = Input.GetAxis("Vertical");
-        horizontal = Input.GetAxis("Horizontal");
-        
-
-        if(GameObject.FindWithTag("Arma"))
-        {
-            arma = movimento;
-        }
+        barraStamina.fillAmount = (1/MaxStamina) * Stamina;      
 
         Txt_Materiais.text = $"x{Materiais.MateriaisAtuais.ToString()}";
 
-        if(ControlaEventos.SalvaPosicao)
+        if(ControleProgresso.SalvaPosicao)
         {
-            SavePrefs();
-            ControlaEventos.SalvaPosicao = false;
+            SavePrefsPosicao();
+            ControleProgresso.SalvaPosicao = false;
+        }
+
+        if(ControleProgresso.SalvaCena)
+        {
+            SavePrefsCena();
+            ControleProgresso.SalvaCena = false;
         }
     }
  
@@ -119,7 +141,7 @@ public class Jogador : MonoBehaviour
         if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
         {
             animacao.SetFloat("Blend", 0);
-            Velocidade = 8;
+            Velocidade = 2.3f;
             estaAndando = true;
             estaParado = false;
 
@@ -129,7 +151,7 @@ public class Jogador : MonoBehaviour
                 {
                     animacao.SetFloat("Blend", 1);
 
-                    Velocidade = 15;
+                    Velocidade = 3.6f;
                     estaParado = false;
                     estaAndando = false;
                     Stamina -= 0.8f;            
@@ -137,9 +159,9 @@ public class Jogador : MonoBehaviour
             }
             else
             {
-                Velocidade = 8;
+                Velocidade = 2.3f;
                 estaAndando = true;
-                //animacao.SetFloat("Blend", 0);
+                animacao.SetFloat("Blend", 0);
                 if(estaAndando == true)
                 {
                     estaParado = false;
@@ -166,46 +188,11 @@ public class Jogador : MonoBehaviour
         }
     }
 
-    void Rotaciona()
-    {
-        if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 200)) 
-        {
-            
-            Vector3 playerToMouse = hit.point - transform.position;
-            playerToMouse.y = 0;          
-
-            Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
-            rb.MoveRotation (newRotation);
-            Arma1Rb.MoveRotation (newRotation);
-
-            Vector3 forwordDirection = new Vector3 (transform.forward.x, 0, transform.forward.z) * Input.GetAxis ("Vertical");
-            Vector3 sideDirection = new Vector3 (transform.right.x, 0, transform.right.z) * Input.GetAxis ("Horizontal");
-            Vector3 finalDirection = forwordDirection + sideDirection;
-
-            if (finalDirection.magnitude > 1) 
-            {
-                finalDirection.Normalize ();
-            }
-
-            movimento = finalDirection * Velocidade * Time.deltaTime;
-            rb.MovePosition (transform.position + movimento);
-        }
-    }
-
-    void Animacoes()
-    {
-        animacao.enabled = true;
-        animacao.SetFloat("Horizontal", horizontal);
-        animacao.SetFloat("Vertical", vertical);
-    }
-
-    void SavePrefs()
+    void SavePrefsPosicao()
     { 
         PlayerPrefs.SetFloat("PosX", transform.position.x);
         PlayerPrefs.SetFloat("PosY", transform.position.y);
         PlayerPrefs.SetFloat("PosZ", transform.position.z);
-        //PlayerPrefs.SetFloat("Stamina", MaxStamina);
-
         PlayerPrefs.Save();
     }
 
@@ -222,13 +209,10 @@ public class Jogador : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    void LoadPrefs()
+    void LoadPrefsPosicao()
     {
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
         transform.position = pos;
-        
-        // float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
-        // MaxStamina = StaminaSalva;
     }
 
     void LoadPrefsCena()
@@ -240,5 +224,42 @@ public class Jogador : MonoBehaviour
     {
         float StaminaSalva = PlayerPrefs.GetFloat("Stamina");
         MaxStamina = StaminaSalva;
+    }
+    
+    void SetupAnimator()
+    {
+        anim = GetComponent<Animator>();
+
+        foreach(var childAnimator in GetComponentsInChildren<Animator>())
+        {
+            if(childAnimator != anim)
+            {
+                anim.avatar = childAnimator.avatar;
+                Destroy(childAnimator);
+                break;
+            }
+        }
+    }
+
+    void Move(Vector3 move)
+    {
+        if(move.magnitude > 1)
+        {
+            move.Normalize();
+        }
+        this.moveInput = move;
+    }
+
+    void ConvertMoveInput()
+    {
+        Vector3 localMove = transform.InverseTransformDirection(moveInput);
+        turnAmount = localMove.x;
+        forwardAmount = localMove.z;
+    }
+
+    void UpdateAnimator()
+    {
+        anim.SetFloat("Horizontal", forwardAmount, 0.1f, Time.deltaTime);
+        anim.SetFloat("Vertical", turnAmount, 0.1f, Time.deltaTime);
     }
 }

@@ -48,10 +48,10 @@ public class XP : MonoBehaviour
         TextoNivel.text = Nivel.ToString(); 
         Txt_XP.text = $"XP: {XPAtual.ToString("0")}/{XPNivel.ToString("0")}"; 
 
-        if(ControlaEventos.SalvaXP)
+        if(ControleProgresso.SalvaXP)
         {
             SavePrefs();
-            ControlaEventos.SalvaXP = false;
+            ControleProgresso.SalvaXP = false;
         }    
     }
 

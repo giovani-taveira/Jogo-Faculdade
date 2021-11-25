@@ -29,10 +29,10 @@ public class Materiais : MonoBehaviour
 
     void Update()
     {
-        if(ControlaEventos.SalvaMateriais)
+        if(ControleProgresso.SalvaMateriais)
         {
             SavePrefs();
-            ControlaEventos.SalvaMateriais = false;
+            ControleProgresso.SalvaMateriais = false;
         }
     }
 

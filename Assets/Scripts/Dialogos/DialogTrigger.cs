@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class DialogTrigger : MonoBehaviour
 {
-    public DialogContainer dialogContainer;
+    public DialogContainer dialogContainer, dialogContainer2;
+
     public GameObject InterfaceDialogos;
     public Text Txt_Interagir;
     public static bool DialogoAutomatico = false;
@@ -27,6 +28,16 @@ public class DialogTrigger : MonoBehaviour
             DialogManager.Instance.StartConversation(dialogContainer);
             ControlaEventos.AtivaDialogos = false;
             DialogoAutomatico = false;
+        } 
+
+        if (ControlaEventos.DialogoImpedirProgresso)
+        {
+            InterfaceDialogos.SetActive(true);
+            Txt_Interagir.enabled = false;
+            DialogManager.Instance.StartConversation(dialogContainer2);
+            ControlaEventos.AtivaDialogos = false;
+            ControlaEventos.DialogoImpedirProgresso = false;
+            //Time.timeScale = 0;
         } 
     }
 }

@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Arma\EquipaArma.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\ControlaVolume.cs" />
      <Compile Include="Assets\Scripts\Configuracoes\Video.cs" />
+     <Compile Include="Assets\Scripts\ControleProgresso.cs" />
      <Compile Include="Assets\Scripts\ControllerMusicas.cs" />
      <Compile Include="Assets\Scripts\Controllers\ControlaEventos.cs" />
      <Compile Include="Assets\Scripts\Controllers\SceneLoader.cs" />
@@ -87,6 +88,7 @@
      <Compile Include="Assets\Scripts\Jogador\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\Jogador\XP.cs" />
      <Compile Include="Assets\Scripts\Jogador\camera.cs" />
+     <Compile Include="Assets\Scripts\Teste.cs" />
      <Compile Include="Assets\Scripts\TimerCreditos.cs" />
      <Compile Include="Assets\Scripts\TutorialUI.cs" />
      <Compile Include="Assets\Scripts\Upgrade.cs" />

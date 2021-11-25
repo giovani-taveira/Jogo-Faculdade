@@ -6,11 +6,8 @@ using UnityEngine.UI;
 
 public class BotoesMenuPrincipal : MonoBehaviour
 {
-    public GameObject InterfaceMenuPrincipal;
-    public GameObject InterfaceConfig;
+    public GameObject InterfaceMenuPrincipal, InterfaceConfig, AvisoSemSave, AvisoPerdaDeSave;
     public static bool salvarConfigs = false;
-    //public GameObject VerificacaoSave;
-    //public GameObject Aviso;
 
     void Start()
     {
@@ -18,7 +15,6 @@ public class BotoesMenuPrincipal : MonoBehaviour
     }
     public void Iniciar()
     {
-
         Time.timeScale = 1;
         OutrasAcoes.EstaPausado = false;
 
@@ -26,29 +22,23 @@ public class BotoesMenuPrincipal : MonoBehaviour
         {
             string cena = PlayerPrefs.GetString("Cena");
             SceneLoader.Instance.LoadSceneAsync(cena);
-            //SceneManager.LoadScene(cena);
         }
         else
         {    
-            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey1");
-            //VerificacaoSave.SetActive(true);
-            //SceneManager.LoadScene("Casa-Frank");
+            AvisoSemSave.SetActive(true);
         }
     }
 
     public void NovoJogo()
     {
-        //Aviso.SetActive(true);
-        PlayerPrefs.DeleteAll();
-
         if(PlayerPrefs.HasKey("Cena"))
         {
-            string cena = PlayerPrefs.GetString("Cena");
-            SceneManager.LoadScene(cena);
+            AvisoPerdaDeSave.SetActive(true);
         }
         else
-        {    
-            SceneManager.LoadScene("CasaJeffrey1");
+        {
+            PlayerPrefs.DeleteAll();
+            SceneLoader.Instance.LoadSceneAsync("CasaJeffrey1");
         }
     }
 
@@ -60,7 +50,6 @@ public class BotoesMenuPrincipal : MonoBehaviour
 
     public void ConfigVoltar()
     {
-        //VerificacaoSave.SetActive(false);
         InterfaceConfig.SetActive(false);
         InterfaceMenuPrincipal.SetActive(true);
         salvarConfigs = true;
@@ -78,11 +67,18 @@ public class BotoesMenuPrincipal : MonoBehaviour
 
     public void IniciarNewGame()
     {
-
+        PlayerPrefs.DeleteAll();
+        SceneLoader.Instance.LoadSceneAsync("CasaJeffrey1");
     }
 
     public void PularCreditos()
     {
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void SairAviso()
+    {
+        AvisoSemSave.SetActive(false);
+        AvisoPerdaDeSave.SetActive(false);
     }
 }

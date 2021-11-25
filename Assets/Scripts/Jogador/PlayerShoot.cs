@@ -93,10 +93,10 @@ public class PlayerShoot : MonoBehaviour
              audios.Play();
         }   
 
-        if(ControlaEventos.SalvaMunicao)
+        if(ControleProgresso.SalvaMunicao)
         {  
             SavePrefs();
-            ControlaEventos.SalvaMunicao =  false;
+            ControleProgresso.SalvaMunicao =  false;
             Debug.Log("SalveiMunicao");
         }
     }

@@ -60,10 +60,10 @@ public class ControlaVida : MonoBehaviour
         }
         TomouDano = false;
 
-        if(ControlaEventos.SalvaVida)
+        if(ControleProgresso.SalvaVida)
         {
             SavePrefs();
-            ControlaEventos.SalvaVida = false;
+            ControleProgresso.SalvaVida = false;
         }
     }
 

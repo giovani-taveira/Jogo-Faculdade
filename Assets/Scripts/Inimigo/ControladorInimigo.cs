@@ -12,18 +12,16 @@ public class ControladorInimigo : MonoBehaviour
     public int QuantidadeInimigoAtual;
     public Transform[] PontosDeSpawn;
     public static int InimigosMortos;
-    public bool a;
     public int SpawnsZerados;
     public bool colidiu;
     string CenaAtual;
+
 
     void Start()
     {
         QuantidadeInimigoAtual = 0;
         InvokeRepeating("Spawn", TempoSpawn, TempoSpawn);
         CenaAtual = SceneManager.GetActiveScene().name;
-
-
     }
 
     void Update()
@@ -31,7 +29,6 @@ public class ControladorInimigo : MonoBehaviour
         if(SpawnsZerados == PontosDeSpawn.Length )
         {
             Debug.Log("Spwns Zerados");
-
         }
 
         if(VidaDoInimigo.DestruiuInimigo)
@@ -41,14 +38,8 @@ public class ControladorInimigo : MonoBehaviour
         }
         if(InimigosMortos == 5 && CenaAtual == "CasaJeffrey3")
         {
-            //SceneLoader.Instance.LoadSceneAsync("CasaFrank2");
             SceneManager.LoadScene("CasaFrank2");
         }  
-        if(a)
-        {
-            SpawnsZerados += 1;
-            a = false;
-        }
     } 
 
 

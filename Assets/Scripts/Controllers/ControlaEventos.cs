@@ -7,13 +7,15 @@ public class ControlaEventos : MonoBehaviour
 {
     #region "Variaveis"
     public GameObject Spawn1, Spawn2, Spawn3, CanvasDialogo, InterfaceUpgrade, InterfaceGameplay;
-    public static bool Zoom, SalvaXP, SalvaVida, SalvaMunicao, SalvaPosicao, SalvaMateriais;
+    public static bool Zoom, AtivaMusica1, AtivaMusica2, AtivaMusica3, DesativaMusica;
     public Animator animacao;
     public Text Txt_PegarItem;
     public static bool AtivaDialogos = false, DialogoAutomatico = false,  SpawnaBoss = false;
     public DialogContainer dialogContainer;
-    public static bool DesativaText = false, AtivaMusica1, AtivaMusica2, AtivaMusica3, DesativaMusica, ZoomBoss; 
-    
+    public static bool DesativaText = false,  ZoomBoss; 
+
+    public static bool DialogoImpedirProgresso; 
+
    
     #endregion
     void Start()
@@ -21,7 +23,6 @@ public class ControlaEventos : MonoBehaviour
         Spawn1.SetActive(false);
         Spawn2.SetActive(false);
         Spawn3.SetActive(false);
-        //Txt_PegarItem.enabled = false;
     }
 
     void Update()
@@ -97,19 +98,6 @@ public class ControlaEventos : MonoBehaviour
             AtivaDialogos = true;
             DialogTrigger.DialogoAutomatico = true;
         }
-
-        if(colider.gameObject.tag == "CheckPoint")
-        {  
-            SalvaXP = true;
-            SalvaVida = true;
-            SalvaMunicao = true;
-            SalvaPosicao = true;
-            SalvaMateriais = true;
-            DesativaMusica = true;
-            AtivaMusica1 = false;
-            AtivaMusica2 = false;
-            AtivaMusica3 = false;
-        }
     }
 
     void OnTriggerStay(Collider collider)
@@ -127,9 +115,27 @@ public class ControlaEventos : MonoBehaviour
             }
         }
     }
+
     void OnTriggerExit()
     {
         Txt_PegarItem.enabled = false;
         AtivaDialogos = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if( collision.gameObject.tag == "ParedeInvisivel")
+        {
+            DialogoImpedirProgresso = true;
+            // Parede1.SetActive(false);
+            // TriggerInimigo1.SetActive(false);
+        }
+
+        if( collision.gameObject.tag == "ParedeInvisivel2")
+        {
+            DialogoImpedirProgresso = true;
+            // Parede2.SetActive(false);
+            // TriggerInimigo2.SetActive(false);
+        }
     }
 }

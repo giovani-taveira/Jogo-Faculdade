@@ -49,8 +49,8 @@ public class camera : MonoBehaviour
             velocidade = 3;
             ComZoom = false;
             ControlaEventos.Zoom = false;
-            Debug.Log("ENTREI NO IF5");
         }
+
         if(ControlaEventos.Zoom && !ComZoom)
         {
             offset.y = 30;
@@ -59,23 +59,20 @@ public class camera : MonoBehaviour
             velocidade = 2;
             ComZoom = true;
             ControlaEventos.Zoom = false;
-            Debug.Log("ENTREI NO IF5");
         } 
 
         if(DialogManager.MenosZoom)
         {
             offset.y = 100;
             offset.x = 30;
-            offset.z = -20;
-            Debug.Log("ENTREI NO IF6");
-            
+            offset.z = -20;           
         } 
+
         else if(CenaAtual == "Fase2-Floresta")
         {
             offset.y = 30;
             offset.x = 16;
             offset.z = -2;
-            Debug.Log("ENTREI NO IF18");
         }    
 
         if(DialogManager.MenosZoom2 && CenaAtual == "CasaJeffrey2")
@@ -83,14 +80,12 @@ public class camera : MonoBehaviour
             offset.y = 50;
             offset.x = 50;
             offset.z = -100;
-            Debug.Log("ENTREI NO IF");
         }
         else if(CenaAtual == "CasaJeffrey2")
         {
             offset.y = 30;
             offset.x = 16;
             offset.z = -2;
-            Debug.Log("ENTREI NO IF16");
         }
 
         if(CenaAtual == "CasaJeffrey3")
@@ -98,7 +93,6 @@ public class camera : MonoBehaviour
             offset.y = 55;
             offset.x = 5;
             offset.z = -30;
-            Debug.Log("ENTREI NO IF2");
         }
 
         if(DialogManager.MenosZoom3)
@@ -106,7 +100,6 @@ public class camera : MonoBehaviour
             offset.y = 55;
             offset.x = -45;
             offset.z = -40;
-            Debug.Log("ENTREI NO IF3");
         }
                 
                 
@@ -115,15 +108,12 @@ public class camera : MonoBehaviour
             offset.y = 55;
             offset.x = 30;
             offset.z = -20;
-            Debug.Log("ENTREI NO IF4");
-            //Debug.Log("ENTREI NO IF");
         } 
         else if (CenaAtual == "CasaFrank2")
         {
             offset.y = 30;
             offset.x = 16;
             offset.z = -2;
-            Debug.Log("ENTREI NO IF666");
         }  
 
         if(CenaAtual == "Cena-Milton" && !ControlaEventos.ZoomBoss)
@@ -131,15 +121,13 @@ public class camera : MonoBehaviour
             offset.y = 33;
             offset.x = 8;
             offset.z = -15;
-
-
         } 
+
         if(CenaAtual == "Cena-Milton" && ControlaEventos.ZoomBoss)
         {
             offset.y = 55;
             offset.x = 8;
             offset.z = -20;
-            //ControlaEventos.ZoomBoss = false;
         }
 
         if(DialogManager.MenosZoom6)
